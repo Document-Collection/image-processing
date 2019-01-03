@@ -6,7 +6,7 @@
         {
             "label": "create",
             "type": "shell",
-            "command": "g++ -g -o create -std=c++17 createsamples.cpp utility.cpp `pkg-config --libs --cflags opencv`",
+            "command": "g++ -o create -std=c++17 createsamples.cpp utility.cpp `pkg-config --libs --cflags opencv`",
             "args": [],
             "group": {
                 "kind": "build",
@@ -16,7 +16,7 @@
         {
             "label": "create",
             "type": "shell",
-            "command": "g++ -g -std=c++17 createsamples.cpp utility.cpp `pkg-config --libs --cflags opencv`",
+            "command": "g++ -g -o create -std=c++17 createsamples.cpp utility.cpp `pkg-config --libs --cflags opencv`",
             "args": [],
             "group": {
                 "kind": "test",
