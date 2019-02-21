@@ -9,7 +9,7 @@
 
 官网地址：[OpenCV](https://opencv.org/)
 
-## opencv和opencv_contrib
+## `opencv_contrib`
 
 `OpenCV`将稳定功能和`API`接口的代码放置在`opencv`库，将新特征和新功能的代码放置在`opencv_contrib`库
 
