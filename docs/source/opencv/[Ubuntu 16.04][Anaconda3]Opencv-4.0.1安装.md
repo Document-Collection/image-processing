@@ -44,7 +44,7 @@
 
     [compiler] sudo apt-get install build-essential
     [required] sudo apt-get install cmake git libgtk2.0-dev libgtk-3-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-    [optional] sudo apt-get install libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+    [optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 
 ## 安装
 
@@ -74,3 +74,27 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
 	-D PYTHON_EXECUTABLE=~/.virtualenvs/cv/bin/python \
 	-D BUILD_EXAMPLES=ON ..
+
+    -D BUILD_DOCS=ON
+    -D BUILD_EXAMPLES=ON
+    -D CMAKE_INSTALL_PREFIX=../install
+    -D INSTALL_PYTHON_EXAMPLES=ON
+    -D OPENCV_PYTHON3_VERSION=ON
+    -D PYTHON3_EXECUTABLE=/home/zj/software/anaconda/anaconda3/bin/python3
+    -D PYTHON3_INCLUDE_DIR=/home/zj/software/anaconda/anaconda3/include/python3.7m
+    -D PYTHON3_LIBRARY=/home/zj/software/anaconda/anaconda3/lib/python3.7/config-3.7m-x86_64-linux-gnu/libpython3.7m.a
+    -D PYTHON3_NUMPY_INCLUDE_DIRS=/home/zj/software/anaconda/anaconda3/lib/python3.7/site-packages/numpy/core/include/
+
+
+
+
+    cmake -D CMAKE_BUILD_TYPE=RELEASE \  
+        -D CMAKE_INSTALL_PREFIX=../install \  
+        -D BUILD_DOCS=ON
+        -D BUILD_EXAMPLES=ON
+        -D INSTALL_PYTHON_EXAMPLES=ON
+        -D OPENCV_PYTHON3_VERSION=ON
+        -D PYTHON_EXECUTABLE=<anaconda_work_dir>/envs/<environment>/bin/python \  
+        -D PYTHON_LIBRARY=<anaconda_work_dir>/envs/<environment>/lib/python2.7 \  
+        -D PYTHON_INCLUDE_DIR=<anaconda_work_dir>/envs/<environment>/include/python2.7 \  
+        ..
