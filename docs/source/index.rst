@@ -11,3 +11,4 @@
    :caption: Contents:
 
    opencv
+   anaconda
