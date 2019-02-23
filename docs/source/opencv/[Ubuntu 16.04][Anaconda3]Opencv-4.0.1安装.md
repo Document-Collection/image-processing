@@ -52,49 +52,14 @@
 
     git clone git@github.com:opencv/opencv.git
 
-解压生成opencv-4.0.1
+解压生成`opencv-4.0.1`
 
     $ cd opencv/opencv-4.0.1/
     $ mkdir build
     $ mkdir install
     $ cd build
 
-仅编译C++库 
+仅编译`C++`库 
 
     # 生成编译文件，设置编译版本为release，指定安装包前缀
     $ cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=../install ..
-    
-同时编译Python库
-
-$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
-	-D CMAKE_INSTALL_PREFIX=../install \
-	-D INSTALL_PYTHON_EXAMPLES=ON \
-	-D INSTALL_C_EXAMPLES=ON \
-	-D OPENCV_ENABLE_NONFREE=ON \
-	-D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
-	-D PYTHON_EXECUTABLE=~/.virtualenvs/cv/bin/python \
-	-D BUILD_EXAMPLES=ON ..
-
-    -D BUILD_DOCS=ON
-    -D BUILD_EXAMPLES=ON
-    -D CMAKE_INSTALL_PREFIX=../install
-    -D INSTALL_PYTHON_EXAMPLES=ON
-    -D OPENCV_PYTHON3_VERSION=ON
-    -D PYTHON3_EXECUTABLE=/home/zj/software/anaconda/anaconda3/bin/python3
-    -D PYTHON3_INCLUDE_DIR=/home/zj/software/anaconda/anaconda3/include/python3.7m
-    -D PYTHON3_LIBRARY=/home/zj/software/anaconda/anaconda3/lib/python3.7/config-3.7m-x86_64-linux-gnu/libpython3.7m.a
-    -D PYTHON3_NUMPY_INCLUDE_DIRS=/home/zj/software/anaconda/anaconda3/lib/python3.7/site-packages/numpy/core/include/
-
-
-
-
-    cmake -D CMAKE_BUILD_TYPE=RELEASE \  
-        -D CMAKE_INSTALL_PREFIX=../install \  
-        -D BUILD_DOCS=ON
-        -D BUILD_EXAMPLES=ON
-        -D INSTALL_PYTHON_EXAMPLES=ON
-        -D OPENCV_PYTHON3_VERSION=ON
-        -D PYTHON_EXECUTABLE=<anaconda_work_dir>/envs/<environment>/bin/python \  
-        -D PYTHON_LIBRARY=<anaconda_work_dir>/envs/<environment>/lib/python2.7 \  
-        -D PYTHON_INCLUDE_DIR=<anaconda_work_dir>/envs/<environment>/include/python2.7 \  
-        ..

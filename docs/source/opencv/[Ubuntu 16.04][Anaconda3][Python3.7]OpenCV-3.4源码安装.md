@@ -1,40 +1,121 @@
 
-# [Ubuntu 16.04][Anaconda3][Python3.7]OpenCV-3.4安装
+# [Ubuntu 16.04][Anaconda3][Python3.7]OpenCV-3.4.2源码安装
 
+## 版本设置
+
+下载源码
+
+    $ git clone https://github.com/opencv/opencv.git
+    
+切换到`3.4.2`版本
+
+    # 新建分支，命名为3.4.2
+    $ git checkout -b 3.4.2
+    # 查询tag，3.4.2版本的提交号
+    $ git show 3.4.2
+    warning: refname '3.4.2' is ambiguous.
+    tag 3.4.2
+    Tagger: Alexander Alekhin <alexander.alekhin@intel.com>
+    Date:   Wed Jul 4 14:06:58 2018 +0300
+
+    OpenCV 3.4.2
+
+    commit 9e1b1e5389237c2b9f6c7b9d7715d9836c0a5de1
+    Merge: d69a327 a0baae8
+    Author: Alexander Alekhin <alexander.alekhin@intel.com>
+    Date:   Wed Jul 4 14:05:47 2018 +0300
+
+    OpenCV 3.4.2
+    # 切换到该版本
+    $ git reset --hard 9e1b1e5389237c2b9f6c7b9d7715d9836c0a5de1
+    # 当前代码就是opencv-3.4.2源码
+    $ git log
+    commit 9e1b1e5389237c2b9f6c7b9d7715d9836c0a5de1
+    Merge: d69a327 a0baae8
+    Author: Alexander Alekhin <alexander.alekhin@intel.com>
+    Date:   Wed Jul 4 14:05:47 2018 +0300
+
+    OpenCV 3.4.2
+
+## 安装依赖
+
+参考：
+
+[Installation in Linux](https://docs.opencv.org/4.0.1/d7/d9f/tutorial_linux_install.html)
+
+[Install OpenCV-Python in Ubuntu ](https://docs.opencv.org/3.4/d2/de6/tutorial_py_setup_in_ubuntu.html)
+
+    [compiler] sudo apt-get install build-essential gcc g++
+    [required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev gtk2-devel libv4l-devel ffmpeg-devel gstreamer-plugins-base-devel
+    [optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev openexr-devel libwebp-devel
+
+## 编译生成动态库
 
     # 进入opencv源码路径，新建用于存储配置文件的build文件夹和用于存储库文件的install文件夹
     $ cd opencv
     $ mkdir build
     $ mkdir install
 
-    # 进入build文件夹，利用cmake生产makefile，然后进行编译和安装
+    # 进入build文件夹，利用cmake生成makefile
     $ cd build
-    $ cmake -D CMAKE_BUILD_TYPE=RELEASE \  
+    $ cmake -D CMAKE_BUILD_TYPE=DEBUG \  
         -D CMAKE_INSTALL_PREFIX=../install \  
         -D BUILD_DOCS=ON \
         -D BUILD_EXAMPLES=ON \
-        -D BUILD_opencv_python2=OFF \
         -D INSTALL_PYTHON_EXAMPLES=ON \
         -D OPENCV_PYTHON3_VERSION=ON \
         -D PYTHON3_EXECUTABLE=<anaconda_work_dir>/envs/<environment>/bin/python \  
-        -D PYTHON3_LIBRARY=<anaconda_work_dir>/envs/<environment>/lib/python3.7 \  
+        -D PYTHON3_LIBRARY=<anaconda_work_dir>/envs/<environment>/lib/python3.7m.so \  
         -D PYTHON3_INCLUDE_DIR=<anaconda_work_dir>/envs/<environment>/include/python3.7m \  
         -D PYTHON3_NUMPY_INCLUDE_DIRS=<anaconda_work_dir>/envs/<environment>/lib/python3.7/site-packages/numpy/core/include
+        -D Pylint_DIR=<anaconda_work_dir>/envs/<environment>/bin/pylint
         ..
 
-    $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=../install -D BUILD_DOCS=ON -D BUILD_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D PYTHON3_EXECUTABLE=/home/zj/software/anaconda/anaconda3/envs/py37/bin/python -D PYTHON3_LIBRARY=/home/zj/software/anaconda/anaconda3/envs/py37/lib/python3.7 -D PYTHON3_INCLUDE_DIR=/home/zj/software/anaconda/anaconda3/envs/py37/include/python3.7m -D PYTHON3_NUMPY_INCLUDE_DIRS=/home/zj/software/anaconda/anaconda3/envs/py37/lib/python3.7/site-packages/numpy/core/include ..
+    # 实现如下
+    $ cmake -D CMAKE_BUILD_TYPE=DEBUG -D CMAKE_INSTALL_PREFIX=../install -D BUILD_DOCS=ON -D BUILD_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D PYTHON3_EXECUTABLE=/home/zj/software/anaconda/anaconda3/envs/py37/bin/python -D PYTHON3_LIBRARY=/home/zj/software/anaconda/anaconda3/envs/py37/lib/libpython3.7m.so -D PYTHON3_INCLUDE_DIR=/home/zj/software/anaconda/anaconda3/envs/py37/include/python3.7m -D PYTHON3_NUMPY_INCLUDE_DIRS=/home/zj/software/anaconda/anaconda3/envs/py37/lib/python3.7/site-packages/numpy/core/include -D Pylint_DIR=/home/zj/software/anaconda/anaconda3/envs/py37/bin/pylint ..
+    -- The CXX compiler identification is GNU 5.4.0
+    -- The C compiler identification is GNU 5.4.0
+    -- Check for working CXX compiler: /usr/bin/c++
+    -- Check for working CXX compiler: /usr/bin/c++ -- works
     ...
     ...
+    -- Found PythonInterp: /usr/bin/python2.7 (found suitable version "2.7.12", minimum required is "2.7") 
+    -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython2.7.so (found suitable exact version "2.7.12") 
+    -- Found PythonInterp: /home/zj/software/anaconda/anaconda3/envs/py37/bin/python (found suitable version "3.7.2", minimum required is "3.2") 
+    -- Found PythonLibs: /home/zj/software/anaconda/anaconda3/envs/py37/lib/libpython3.7m.so (found suitable exact version "3.7.2") 
+    ...
+    ...
+    -- Check if the system is big endian - little endian
+    -- Found ZLIB: /home/zj/software/anaconda/anaconda3/envs/py37/lib/libz.so (found suitable version "1.2.11", minimum required is "1.2.3") 
+    -- Found JPEG: /home/zj/software/anaconda/anaconda3/envs/py37/lib/libjpeg.so  
+    -- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.0.6") 
+    ...
+    ...
+    -- Found Jasper: /usr/lib/x86_64-linux-gnu/libjasper.so (found version "1.900.1") 
+    -- Found ZLIB: /home/zj/software/anaconda/anaconda3/envs/py37/lib/libz.so (found version "1.2.11") 
+    -- Found PNG: /home/zj/software/anaconda/anaconda3/envs/py37/lib/libpng.so (found version "1.6.36") 
+    -- Looking for /home/zj/software/anaconda/anaconda3/envs/py37/include/libpng/png.h
+    -- Looking for /home/zj/software/anaconda/anaconda3/envs/py37/include/libpng/png.h - not found
+    ...
+    ...
+    -- Found Pylint: /home/zj/software/anaconda/anaconda3/envs/py37/bin/pylint  
+    ...
+    ...
+    -- OpenCV Python: during development append to PYTHONPATH: /home/zj/opencv/opencv/build/python_loader
+    ...
+    ...
+    -- Pylint: registered 163 targets. Build 'check_pylint' target to run checks ("cmake --build . --target check_pylint" or "make check_pylint")
+    -- 
     -- General configuration for OpenCV 3.4.5-dev =====================================
     --   Version control:               3.4.5-195-g0e70363
     -- 
     --   Platform:
-    --     Timestamp:                   2019-02-22T06:59:41Z
+    --     Timestamp:                   2019-02-23T03:25:09Z
     --     Host:                        Linux 4.15.0-43-generic x86_64
     --     CMake:                       3.5.1
     --     CMake generator:             Unix Makefiles
     --     CMake build tool:            /usr/bin/make
-    --     Configuration:               RELEASE
+    --     Configuration:               DEBUG
     -- 
     --   CPU/HW features:
     --     Baseline:                    SSE SSE2 SSE3
@@ -79,11 +160,11 @@
     --     VTK support:                 NO
     -- 
     --   Media I/O: 
-    --     ZLib:                        /home/zj/software/anaconda/anaconda3/lib/libz.so (ver 1.2.11)
-    --     JPEG:                        /home/zj/software/anaconda/anaconda3/lib/libjpeg.so (ver 90)
+    --     ZLib:                        /home/zj/software/anaconda/anaconda3/envs/py37/lib/libz.so (ver 1.2.11)
+    --     JPEG:                        /home/zj/software/anaconda/anaconda3/envs/py37/lib/libjpeg.so (ver 90)
     --     WEBP:                        build (ver encoder: 0x020e)
-    --     PNG:                         /home/zj/software/anaconda/anaconda3/lib/libpng.so (ver 1.6.35)
-    --     TIFF:                        /home/zj/software/anaconda/anaconda3/lib/libtiff.so (ver 42 / 4.0.9)
+    --     PNG:                         /home/zj/software/anaconda/anaconda3/envs/py37/lib/libpng.so (ver 1.6.36)
+    --     TIFF:                        /usr/lib/x86_64-linux-gnu/libtiff.so (ver 42 / 4.0.6)
     --     JPEG 2000:                   /usr/lib/x86_64-linux-gnu/libjasper.so (ver 1.900.1)
     --     OpenEXR:                     build (ver 1.7.1)
     --     HDR:                         YES
@@ -128,12 +209,12 @@
     -- 
     --   Python 3:
     --     Interpreter:                 /home/zj/software/anaconda/anaconda3/envs/py37/bin/python (ver 3.7.2)
-    --     Libraries:                   /home/zj/software/anaconda/anaconda3/envs/py37/lib/python3.7 (ver 3.7.2)
+    --     Libraries:                   /home/zj/software/anaconda/anaconda3/envs/py37/lib/libpython3.7m.so (ver 3.7.2)
     --     numpy:                       /home/zj/software/anaconda/anaconda3/envs/py37/lib/python3.7/site-packages/numpy/core/include (ver 1.15.4)
     --     install path:                lib/python3.7/site-packages/cv2/python-3.7
     -- 
     --   Python (for build):            /usr/bin/python2.7
-    --     Pylint:                      /home/zj/software/anaconda/anaconda3/bin/pylint (ver: 3.7.1, checks: 163)
+    --     Pylint:                      /home/zj/software/anaconda/anaconda3/envs/py37/bin/pylint (ver: 3.7.2, checks: 163)
     -- 
     --   Java:                          
     --     ant:                         NO
@@ -147,3 +228,36 @@
     -- Configuring done
     -- Generating done
     -- Build files have been written to: /home/zj/opencv/opencv/build
+
+    # 编译
+    $ make -j8
+    $ sudo make install
+
+最终生成的动态库在`install`文件夹内
+
+## `C++`库配置
+
+配置环境变量`PKG_CONFIG_PATH`
+
+    # opencv3.4
+    $ export PKG_CONFIG_PATH=/home/zj/opencv/install/lib/pkgconfig
+
+是否能查询到头文件和库文件
+
+    $ pkg-config --libs opencv
+    -L/home/zj/opencv/opencv/install/lib -lopencv_ml -lopencv_shape -lopencv_objdetect -lopencv_stitching -lopencv_superres -lopencv_dnn -lopencv_videostab -lopencv_video -lopencv_photo -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_flann -lopencv_videoio -lopencv_imgcodecs -lopencv_imgproc -lopencv_core
+
+    $ pkg-config --cflags opencv
+    -I/home/zj/opencv/opencv/install/include/opencv -I/home/zj/opencv/opencv/install/include
+
+## `python`库配置
+
+编译好后的`python`库放置在`install/lib`中
+
+    /home/zj/opencv/install/lib/python3.7/site-packages/
+
+将库里的文件放置在`anaconda`相应路径下
+
+    /home/zj/software/anaconda/anaconda3/lib/python3.7/site-packages/
+
+这样就可以执行`python`程序了
