@@ -18,13 +18,14 @@
     project(first)
 
     set(CMAKE_CXX_STANDARD 14)
-    set(CMAKE_PREFIX_PATH /home/zj/opencv/debug-3.4.2--py27-py36)
 
+    set(CMAKE_PREFIX_PATH /home/zj/opencv/debug-3.4.2--py27-py36)
     find_package(OpenCV REQUIRED)
     # 打印OpenCV版本
     MESSAGE("OpenCV version: ${OpenCV_VERSION}")
     # 添加include地址
     include_directories(${OpenCV_INCLUDE_DIRS})
+
     add_executable(first main.cpp)
     # 添加libs地址
     target_link_libraries(first ${OpenCV_LIBS})
