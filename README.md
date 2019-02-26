@@ -1,5 +1,7 @@
 # image-processing
 
+[![Documentation Status](https://readthedocs.org/projects/zj-image-processing/badge/?version=latest)](https://zj-image-processing.readthedocs.io/zh_CN/latest/?badge=latest)
+
 图像处理，包括数字图像处理及相关工具/脚本开发
 
 分为两大块，
