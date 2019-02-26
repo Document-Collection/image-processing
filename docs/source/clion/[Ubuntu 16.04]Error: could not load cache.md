@@ -1,7 +1,7 @@
 
 # Error: could not load cache
 
-误删文件夹`cmake-build-debu`g后，重新运行提示错误：
+误删文件夹`cmake-build-debug`g后，重新运行提示错误：
 
     Error running 'Build': Cannot start process, the working directory '/home/zj/Documents/PICC/c++/cmake-build-debug' does not exist
 

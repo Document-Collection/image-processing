@@ -1,5 +1,5 @@
 
-# [Ubuntu 16.04][Anaconda3][Python3.7]OpenCV-3.4.2源码安装
+# [Ubuntu 16.04][Anaconda3][Python3.6]OpenCV-3.4.2源码安装
 
 ## 版本设置
 
@@ -65,9 +65,9 @@
         -D INSTALL_PYTHON_EXAMPLES=ON \
         -D OPENCV_PYTHON3_VERSION=ON \
         -D PYTHON3_EXECUTABLE=<anaconda_work_dir>/envs/<environment>/bin/python \  
-        -D PYTHON3_LIBRARY=<anaconda_work_dir>/envs/<environment>/lib/python3.7m.so \  
-        -D PYTHON3_INCLUDE_DIR=<anaconda_work_dir>/envs/<environment>/include/python3.7m \  
-        -D PYTHON3_NUMPY_INCLUDE_DIRS=<anaconda_work_dir>/envs/<environment>/lib/python3.7/site-packages/numpy/core/include
+        -D PYTHON3_LIBRARY=<anaconda_work_dir>/envs/<environment>/lib/python3.6m.so \  
+        -D PYTHON3_INCLUDE_DIR=<anaconda_work_dir>/envs/<environment>/include/python3.6m \  
+        -D PYTHON3_NUMPY_INCLUDE_DIRS=<anaconda_work_dir>/envs/<environment>/lib/python3.6/site-packages/numpy/core/include
         -D Pylint_DIR=<anaconda_work_dir>/envs/<environment>/bin/pylint
         ..
 
