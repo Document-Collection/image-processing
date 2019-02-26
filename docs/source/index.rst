@@ -12,3 +12,4 @@
 
    opencv
    anaconda
+   clion
