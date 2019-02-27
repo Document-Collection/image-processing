@@ -14,3 +14,4 @@
    anaconda
    clion
    c++
+   android
