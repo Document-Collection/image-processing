@@ -13,3 +13,5 @@ android
    android/android/[Ubuntu 16.04]制作启动器
 
    android/gradle/[Ubuntu 16.04]gradle同步失败
+
+   ndk
