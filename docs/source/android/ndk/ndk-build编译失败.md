@@ -14,7 +14,7 @@
 
     APP_ABI := armeabi-v7a
 
-## 问题二：
+## 问题二
 
     /home/zj/Android/Sdk/ndk-bundle/build/ndk-build
     Android NDK: android-8 is unsupported. Using minimum supported version android-16.    
@@ -25,3 +25,16 @@
     Android NDK:     current module    
     /home/zj/Documents/PICC/android/numberocr/src/main/obj/local/armeabi-v7a/objs/IDNumberOCR/main.o.d:1: *** target pattern contains no `%'.  Stop.
 
+参考：[android ndk-build 时出现target pattern contain no % 的解决方法](https://blog.csdn.net/onerain88/article/details/6969235)
+
+删除obj文件夹（这个文件夹伴随着libs一起生成）里的.o文件，重新ndk-build即可
+
+## 问题三
+
+    7:14: fatal error: 'array' file not found
+
+参考：[解决ndk-build : fatal error: 'iostream' file not found](https://blog.csdn.net/liangtianmeng/article/details/83511480)
+
+新建Application.mk，添加
+
+    APP_STL := c++_static

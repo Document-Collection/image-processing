@@ -72,3 +72,11 @@
     See https://developer.android.com/r/tools/annotation-processor-error-message.html for more details.
 
 参考：[添加依赖报错：Annotation processors must be explicitly declared now.](https://blog.csdn.net/qq_31235823/article/details/83028145)
+
+## 问题六
+
+    Process 'command '/home/zj/Android/Sdk/ndk-bundle/ndk-build'' finished with non-zero exit value 2
+
+参考：[Android Studio failed build NDK project non-zero exit value](https://stackoverflow.com/questions/29605029/android-studio-failed-build-ndk-project-non-zero-exit-value)
+
+设置`sourceSets.main.jni.srcDirs = []`为空
