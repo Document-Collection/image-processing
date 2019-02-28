@@ -63,3 +63,12 @@
     ERROR: SSL peer shut down incorrectly
 
 参考：[Android Studio报错，Error:SSL peer shut down incorrectly](https://blog.csdn.net/hbwindy/article/details/51378240)
+
+## 问题五
+
+    Annotation processors must be explicitly declared now.  The following dependencies on the compile classpath are found to contain annotation processor.  Please add them to the annotationProcessor configuration.
+    - butterknife-compiler-10.1.0.jar (com.jakewharton:butterknife-compiler:10.1.0)
+    Alternatively, set android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true to continue with previous behavior.  Note that this option is deprecated and will be removed in the future.
+    See https://developer.android.com/r/tools/annotation-processor-error-message.html for more details.
+
+参考：[添加依赖报错：Annotation processors must be explicitly declared now.](https://blog.csdn.net/qq_31235823/article/details/83028145)
