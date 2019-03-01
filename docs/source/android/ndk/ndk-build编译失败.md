@@ -38,3 +38,32 @@
 新建Application.mk，添加
 
     APP_STL := c++_static
+
+## 问题三
+
+    /home/zj/Documents/PICC/android/faceocr/src/main/jni/main.cpp:11:8: error: expected unqualified-id
+    extern "C" {
+        ^
+    1 error generated.
+    make: *** [/home/zj/Documents/PICC/android/faceocr/src/main/obj/local/arm64-v8a/objs/FaceOCR/main.o] Error 1
+
+参考:[expected unqualified-id before ....的问题](https://blog.csdn.net/wytbno/article/details/45182423)
+
+在其他头文件的类定义中需要再默认添加分号
+
+## 问题四
+
+    undefined reference to `cv::CascadeClassifier::detectMultiScale
+
+参考:[OpenCV - undefined reference to 'cv::CascadeClassifier::detectMultiScale() after NDK update](https://stackoverflow.com/questions/50315422/opencv-undefined-reference-to-cvcascadeclassifierdetectmultiscale-after)
+
+设置`Application.mk`中的`C++`标准库
+
+    APP_STL := gnustl_static
+
+最新的`NDK`不再支持`gnustl`,所以下载之前版本的`NDK`进行编译
+
+    # 最新
+    Latest Stable Version (r19b)
+    # 之前版本
+    Android NDK, Revision 16b (December 2017)
