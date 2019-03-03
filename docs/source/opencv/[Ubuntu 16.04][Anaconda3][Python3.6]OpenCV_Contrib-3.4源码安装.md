@@ -146,3 +146,6 @@
 
     $ pkg-config --cflags opencv
     -I/home/zj/opencv/opencv/install/include/opencv -I/home/zj/opencv/opencv/install/include
+
+    -DOPENCV_EXTRA_
+    MODULES_PATH=/home/zj/opencv/opencv_contrib/modules

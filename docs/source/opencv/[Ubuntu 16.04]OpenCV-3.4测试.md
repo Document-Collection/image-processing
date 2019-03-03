@@ -1,5 +1,5 @@
 
-# [Ubuntu 16.04]OpenCV测试
+# [Ubuntu 16.04]OpenCV-3.4测试
 
 编译生成`OpenCV C++`库和`Python`库后进行代码测试
 
