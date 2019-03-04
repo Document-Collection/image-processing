@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = '图像处理'
+project = u'图像处理'
 copyright = '2019, zhujian'
 author = 'zhujian'
 
@@ -138,7 +138,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'sphinx.tex', '图像处理 Documentation',
+    (master_doc, 'sphinx.tex', u'图像处理 Documentation',
      'zhujian', 'manual'),
 ]
 

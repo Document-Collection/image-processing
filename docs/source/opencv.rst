@@ -13,3 +13,4 @@ OpenCV
    opencv/[PyCharm]解码opencv python库
    opencv/[Ubuntu 16.04][Anaconda3]Opencv-4.0.1安装
    opencv/[Ubuntu 16.04]OpenCV-4.0.1测试
+   opencv/[Ubuntu 16.04][Anaconda3][OpenCV_Contrib 4.0.1]编译OpenCV4Android
