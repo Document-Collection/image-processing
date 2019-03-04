@@ -81,6 +81,26 @@
     #endif
     #endif
 
+### 编译出错
+
+之前配置好后都可以成功运行,但是今天点击`.java`文件,右键`->External Tool->javah`失败
+
+    /home/zj/software/java/jdk1.8.0_201/bin/javah -v -jni -d /home/zj/Documents/PICC/android/faceocr/src/main/jni com.zj.faceocr.FaceOCR
+    Error: Could not find class file for 'com.zj.faceocr.FaceOCR'.
+
+母鸡,在网上找了一个参考:[Javah tool error: Could not find class file for hellojni](https://stackoverflow.com/questions/19137201/javah-tool-error-could-not-find-class-file-for-hellojni)
+
+在包文件根目录下进行`javah`操作才能够成功
+
+    $ javah -v -jni -d /home/zj/Documents/PICC/android/faceocr/src/main/jni com.zj.faceocr.FaceOCR
+    [Creating file RegularFileObject[/home/zj/Documents/PICC/android/faceocr/src/main/jni/com_zj_faceocr_FaceOCR.h]]
+
+参考:[android studio external tool 自定义工具（Javah命令）](https://blog.csdn.net/fangyoayu2013/article/details/51094061)
+
+增加参数`-classpath`
+
+    -classpath . -v -jni -d $ModuleFileDir$/src/main/jni $FileClass$
+
 ## 配置`ndk-build`
 
 `nkd-build`命令在刚才配置的`ndk-bundle`包中
