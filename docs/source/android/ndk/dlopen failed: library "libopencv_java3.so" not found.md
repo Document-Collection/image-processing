@@ -7,6 +7,8 @@
         Process: com.zj.picc, PID: 17090
         java.lang.UnsatisfiedLinkError: dlopen failed: library "libopencv_java3.so" not found
 
+## 方法一
+
 参考：[Unable to link native library in OpenCV Android sample](https://stackoverflow.com/questions/10857301/unable-to-link-native-library-in-opencv-android-sample/29640808#29640808)
 
 我用的`opencv-android-sdk`版本是`3.4.2`，搜索是否包含`libopencv_java3.so`
@@ -26,3 +28,11 @@
         System.loadLibrary("opencv_java3");
         System.loadLibrary("NumberOCR");
     }
+
+## 方法二
+
+参考:[could not load library libopencv_java.so](https://blog.csdn.net/wuzuyu365/article/details/53708535)
+
+修改`Android.mk`,添加
+
+    OPENCV_INSTALL_MODULES:=on
