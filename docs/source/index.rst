@@ -15,3 +15,4 @@
    clion
    c++
    android
+   pytorch
