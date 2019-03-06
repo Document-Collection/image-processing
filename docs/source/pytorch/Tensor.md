@@ -95,7 +95,7 @@
     tensor(0)
     tensor([0, 1, 2])
 
-使用函数`item()`将单个`tensor`转换成数值
+使用函数`item()`将单个`tensor`转换成数值(标量,`scalar`)
 
     print(x[3].item())
     3
@@ -125,6 +125,8 @@
     import numpy as np
     a = np.ones(5)
     b = torch.from_numpy(a)
+
+除了`CharTensor`以外,`CPU`上的其他`Tensor`都支持和`Numpy`的转换
 
 ## `cuda tensor`
 
