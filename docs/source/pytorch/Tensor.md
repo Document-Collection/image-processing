@@ -13,7 +13,11 @@
 6. `numpy`格式转换
 7. `cuda tensor`
 
-`tensor`函数查询:[TORCH](https://pytorch.org/docs/stable/torch.html)
+函数查询:
+
+[TORCH](https://pytorch.org/docs/stable/torch.html)
+
+[TORCH.TENSOR](https://pytorch.org/docs/stable/tensors.html#torch-tensor)
 
 ## 创建`tensor`
 
@@ -22,8 +26,9 @@
     # 赋值为0
     torch.zeros(5, 3)
     # 赋值为1
-    torch.ones(5, 3)
-    torch.new_ones(5, 3)
+    x = torch.ones(5, 3)
+    y = x.new_ones(5)
+    z = torch.ones_like(x)
     # 未初始化
     torch.empty(5, 3)
     # 赋值均匀分布的随机数,大小在[0,1)
@@ -32,7 +37,20 @@
 
 也可以转换列表为`tensor`
 
-    torch.tensor([[0 for i in range(3)] for j in range(5)])
+    torch.tensor([[i+j for i in range(3)] for j in range(5)])
+    # 结果
+    tensor([[0, 1, 2],
+            [1, 2, 3],
+            [2, 3, 4],
+            [3, 4, 5],
+            [4, 5, 6]])
+
+或者使用函数`arange`
+
+    # 创建一个连续列表
+    torch.arange(2, 10)
+    # 结果
+    tensor([3, 4, 5, 6, 7, 8, 9])
 
 或者复制其他`tensor`
 
@@ -61,6 +79,22 @@
 
 `torch.Size`类型实际上是一个元组(`tuple`),可以执行所有元组操作
 
+### 重置大小
+
+使用函数[torch.Tensor.view](https://pytorch.org/docs/stable/tensors.html#torch.Tensor.view)可以重置大小
+
+    # 重建4x4数组
+    x = torch.randn(4, 4)
+    # 重置大小为16
+    y = x.view(16)
+    # 重置大小为2x8
+    z = x.view(-1, 8) # 输入-1值，那么该维度大小会参考其他维度
+    # 输出
+    $ print(x.size(), y.size(), z.size())
+    torch.Size([4, 4]) torch.Size([16]) torch.Size([2, 8])
+
+或者使用函数[torch.Tensor.reshape](https://pytorch.org/docs/stable/torch.html#torch.reshape)
+
 ## 加/减/乘/除
 
 进行加/减/乘/除的张量大小相同,在对应位置上进行操作
@@ -68,13 +102,20 @@
     x = torch.ones(2, 3)
     y = torch.randn(2, 3)
     # 加
-    torch.add(x, y)
+    re = torch.add(x, y)
     # 减 x - y
-    torch.sub(x, y)
+    re = torch.sub(x, y)
     # 乘
-    torch.mul(x, y)
+    re = torch.mul(x, y)
     # 除 x / y
-    torch.div(x,y)
+    re = torch.div(x,y)
+
+也可以使用参数`out`来复制结果
+
+    # 设置同样大小数组
+    re = torch.empty(2, 3)
+    # 加法
+    torch.add(x, y, out=re)
 
 ## 矩阵运算
 
@@ -88,7 +129,9 @@
 
     x = torch.tensor([x for x in range(6)])
     print(x)
+    # 取值
     print(x[0])
+    # 切片
     print(x[:3])
     # 结果
     tensor([0, 1, 2, 3, 4, 5])
@@ -127,6 +170,8 @@
     b = torch.from_numpy(a)
 
 除了`CharTensor`以外,`CPU`上的其他`Tensor`都支持和`Numpy`的转换
+
+**注意：转换前后的数组共享底层内存，改变会同时发生**
 
 ## `cuda tensor`
 
