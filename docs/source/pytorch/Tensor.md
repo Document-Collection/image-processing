@@ -5,13 +5,14 @@
 
 `Tensor`(张量)是`pytorch`最重要的数据结构,类似与`numpy`库中的`ndarray`,能够实现多维数据的加/减/乘/除以及更加复杂的操作
 
-1. 创建`tensor`
-2. 加/减/乘/除
-3. 矩阵运算
-4. 访问元素
-5. `in_place`操作
-6. `numpy`格式转换
-7. `cuda tensor`
+* 创建`tensor`
+* 重置大小
+* 加/减/乘/除
+* 矩阵运算
+* 访问单个元素
+* `in_place`操作
+* `numpy`格式转换
+* `cuda tensor`
 
 函数查询:
 
@@ -79,7 +80,7 @@
 
 `torch.Size`类型实际上是一个元组(`tuple`),可以执行所有元组操作
 
-### 重置大小
+## 重置大小
 
 使用函数[torch.Tensor.view](https://pytorch.org/docs/stable/tensors.html#torch.Tensor.view)可以重置大小
 
@@ -123,7 +124,7 @@
     x = torch.ones(2,3) # 生成一个2行3列
     y = x.t()           # 得到一个3行2列
 
-## 访问元素
+## 访问单个元素
 
 可以执行类似`Numpy`数组的取值操作
 
@@ -180,10 +181,10 @@
     x = torch.tensor(5)
     if torch.cuda.is_available():                # 测试cuda是否有效
         device = torch.device("cuda")            # 生成一个cuda对象
-        y = torch.ones_like(x, device=device)    # 在GPU中创建y
-        x = x.to(device)                         # 在GPU中创建x
+        y = torch.ones_like(x, device=device)    # 直接在GPU中创建y
+        x = x.to(device)                         # 转换CPU数据到GPU中，也可直接使用函数`.to("cuda")`
         z = x + y                                # GPU运算
         print(x)
         print(y)
         print(z)
-        print(z.to('cpu', torch.double))         # 在CPU中创建z
+        print(z.to('cpu', torch.double))         # 转换数据到CPU，同时转换类型
