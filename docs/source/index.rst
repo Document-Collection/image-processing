@@ -17,3 +17,4 @@
    python
    android
    pytorch
+   matplotlib
