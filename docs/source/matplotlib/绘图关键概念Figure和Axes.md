@@ -38,6 +38,14 @@ matplotlib.pyplot.figure(num=None, figsize=None, dpi=None, facecolor=None, edgec
 fig = plt.figure(figsize=(6, 8))
 ```
 
+#### 保存图像
+
+使用函数[matplotlib.pyplot.savefig](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html?highlight=savefig#matplotlib-pyplot-savefig)保存当前`Figure`
+
+```
+plt.savefig('xxx.png')
+```
+
 ### `suptitle`
 
 调用[matplotlib.pyplot.suptitle](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.suptitle.html?highlight=suptitle#matplotlib-pyplot-suptitle)为一张图形添加居中标题
