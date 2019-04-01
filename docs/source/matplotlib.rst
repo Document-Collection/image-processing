@@ -13,3 +13,4 @@ matplotlib
    matplotlib/[Ubuntu 16.04][matplotlib]中文乱码
    matplotlib/绘图关键概念Figure和Axes
    matplotlib/[译][matplotlib]Pyplot教程
+   matplotlib/折线图
