@@ -14,3 +14,4 @@ matplotlib
    matplotlib/绘图关键概念Figure和Axes
    matplotlib/[译][matplotlib]Pyplot教程
    matplotlib/折线图
+   matplotlib/图像读取、显示和保存
