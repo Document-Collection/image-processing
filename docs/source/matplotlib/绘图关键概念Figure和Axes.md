@@ -38,12 +38,20 @@ matplotlib.pyplot.figure(num=None, figsize=None, dpi=None, facecolor=None, edgec
 fig = plt.figure(figsize=(6, 8))
 ```
 
-#### 保存图像
+#### 保存图形
 
 使用函数[matplotlib.pyplot.savefig](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html?highlight=savefig#matplotlib-pyplot-savefig)保存当前`Figure`
 
 ```
 plt.savefig('xxx.png')
+```
+
+#### 显示图形
+
+使用函数[matplotlib.pyplot.show](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html?highlight=show#matplotlib-pyplot-show)显示`Figure`
+
+```
+plt.show()
 ```
 
 ### `suptitle`
