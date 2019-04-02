@@ -46,6 +46,8 @@ fig = plt.figure(figsize=(6, 8))
 plt.savefig('xxx.png')
 ```
 
+使用参数`bbox_inches='tight'`能够在保存图像时减少四周的空白区域
+
 #### 显示图形
 
 使用函数[matplotlib.pyplot.show](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html?highlight=show#matplotlib-pyplot-show)显示`Figure`
