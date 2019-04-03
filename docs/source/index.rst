@@ -12,6 +12,7 @@
 
    base
    opencv
+   cnn
    anaconda
    clion
    c++
