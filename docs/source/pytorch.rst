@@ -13,3 +13,4 @@ pytorch
    pytorch/[Ubuntu 16.04][Anaconda3]jupyter notebook安装
    pytorch/Tensor
    pytorch/LeNet-5定义
+   pytorch/AlexNet定义
