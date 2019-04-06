@@ -16,4 +16,5 @@ matplotlib
    matplotlib/[译][matplotlib]Pyplot教程
    matplotlib/折线图
    matplotlib/饼图
+   matplotlib/散点图
    matplotlib/图像读取、显示和保存
