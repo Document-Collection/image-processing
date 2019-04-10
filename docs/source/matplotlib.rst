@@ -18,3 +18,4 @@ matplotlib
    matplotlib/饼图
    matplotlib/散点图
    matplotlib/图像读取、显示和保存
+   matplotlib/3d绘图
