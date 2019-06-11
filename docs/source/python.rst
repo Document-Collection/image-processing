@@ -8,3 +8,4 @@ python
    :caption: Contents:
 
    python/类操作
+   python/装饰器
