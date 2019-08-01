@@ -11,3 +11,4 @@ python
    python/装饰器
    python/[抽象基类]abc
    python/模块和包
+   python/pytest
