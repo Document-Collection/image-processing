@@ -11,5 +11,6 @@ c++
    c++/[c++11]queue
    c++/[c++11]stack
    c++/[stl]sort
+   c++/[c++11]array
 
    c++/multiple definition of
