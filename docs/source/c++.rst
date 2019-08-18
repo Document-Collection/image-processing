@@ -10,5 +10,6 @@ c++
    c++/基本类结构
    c++/[c++11]queue
    c++/[c++11]stack
+   c++/[stl]sort
 
    c++/multiple definition of
