@@ -233,8 +233,8 @@ using std::endl;
 using std::array;
 
 template<size_t COLS, size_t ROWS>
-void PrintMatrix(std::array<std::array<int, COLS>, ROWS> array) {
-    for (const auto &ary : array) {
+void PrintMatrix(std::array<std::array<int, COLS>, ROWS> arr) {
+    for (const auto &ary : arr) {
         for (const auto &item : ary) {
             cout << item << " ";
         }
