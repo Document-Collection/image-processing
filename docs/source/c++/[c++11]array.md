@@ -203,3 +203,75 @@ first: 11 22 33 44 55
 second: 10 20 30 40 50
 fill: 1 1 1 1 1
 ```
+
+## 二维数组
+
+二维数组定义比较繁琐，参考[【C++ STL应用与实现】5: 如何使用std::array (since C++11) ](https://elloop.github.io/c++/2015-12-23/learning-using-stl-5-std-array)，给出了二维数组定义以及2种初始化方式
+
+### 定义
+
+通过嵌套方式定义二维数组
+
+```
+std::array<std::array<int, COLS>, ROWS> array
+```
+
+里面定义了列数，外面定义了行数
+
+### 初始化方式
+
+有两种初始化方式，一是直接输入数据进行初始化，二是创建一维数组进行初始化
+
+### 实现
+
+```
+#include <iostream>
+#include <array>
+
+using std::cout;
+using std::endl;
+using std::array;
+
+template<size_t COLS, size_t ROWS>
+void PrintMatrix(std::array<std::array<int, COLS>, ROWS> array) {
+    for (const auto &ary : array) {
+        for (const auto &item : ary) {
+            cout << item << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    // like plain 2D array
+    array<array<int, 5>, 5> mat1 = {
+            1, 2, 3, 4, 5,
+            1, 2, 3, 4, 5,
+            1, 2, 3, 4, 5,
+            1, 2, 3, 4, 5,
+            1, 2, 3, 4, 5,
+    };
+
+    // construct with 1D arys.
+    array<int, 3> ary = {1, 2, 3};
+    array<array<int, 3>, 5> mat2 = {ary, ary, ary, ary, ary};
+
+    // just like plain 2D array, but can commit some value some each div.
+    array<array<int, 5>, 5> mat3 = {
+            array<int, 5>{1, 2, 3, 4, 5},
+            array<int, 5>{1, 2, 3, 4},
+            array<int, 5>{1, 2, 3},
+            array<int, 5>{1, 2,},
+            array<int, 5>{1,}
+    };
+
+    cout << "mat1" << endl;
+    PrintMatrix(mat1);
+
+    cout << "mat2" << endl;
+    PrintMatrix(mat2);
+
+    cout << "mat3" << endl;
+    PrintMatrix(mat3);
+}
+```
