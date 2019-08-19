@@ -275,3 +275,48 @@ int main() {
     PrintMatrix(mat3);
 }
 ```
+
+### 指针赋值
+
+利用指针对二维数组进行赋值操作
+
+```
+#include <iostream>
+#include <cstring>
+#include <array>
+
+using std::cout;
+using std::endl;
+using std::array;
+
+typedef int TYPE;
+#define NUM 9
+
+int main() {
+    TYPE arcs[NUM][NUM] = {
+            {0,  10, -1, -1, -1, 11, -1, -1, -1},
+            {10, 0,  18, -1, -1, -1, 16, -1, 12},
+            {-1, 18, 0,  22, -1, -1, -1, -1, 8},
+            {-1, -1, 22, 0,  20, -1, 24, 16, 21},
+            {-1, -1, -1, 20, 0,  26, -1, 7,  9},
+            {11, -1, -1, -1, 26, 0,  17, -1, -1},
+            {-1, 16, -1, 24, -1, 17, 0,  19, -1},
+            {-1, -1, -1, 16, 7,  -1, 19, 0,  -1},
+            {-1, 12, 8,  21, -1, -1, -1, -1, 0}
+    };
+
+    int i = 0;
+    array<array<TYPE, NUM>, NUM> arrs = {};
+    for (auto &ary:arrs) {
+        memcpy(&ary, arcs[i], sizeof(TYPE) * 9);
+        i++;
+    }
+
+    for (auto ary:arrs) {
+        for (auto item : ary) {
+            cout << " " << item;
+        }
+        cout << endl;
+    }
+}
+```
