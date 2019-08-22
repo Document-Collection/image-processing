@@ -1,5 +1,5 @@
 
-# [c++11]queue
+# [c++11][stl]queue
 
 `c++`提供了队列的实现：[queue](http://www.cplusplus.com/reference/queue/queue/)，实现先进先出（`first-in first-out, FIFO`）功能
 

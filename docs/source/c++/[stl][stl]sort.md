@@ -1,5 +1,5 @@
 
-# [stl]sort
+# [stl][stl]sort
 
 参考：[详细解说 STL 排序(Sort) ](http://www.cppblog.com/mzty/archive/2005/12/15/1770.aspx)
 

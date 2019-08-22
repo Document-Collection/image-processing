@@ -1,5 +1,5 @@
 
-# [c++11]array
+# [c++11][stl]array
 
 从`c++11`开始`stl`库新增了一个容器[std::array](http://www.cplusplus.com/reference/array/array/)，它实现的是数组功能，同时集成了一些通用的容器操作
 

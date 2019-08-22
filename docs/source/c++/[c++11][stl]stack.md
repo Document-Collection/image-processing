@@ -1,5 +1,5 @@
 
-# [c++11]stack
+# [c++11][stl]stack
 
 `c++`提供了栈的实现：[queue](http://www.cplusplus.com/reference/queue/queue/)，实现后进先出（`last-in first-out, LIFO`）功能
 
