@@ -9,6 +9,7 @@ c++
 
    c++/基本类结构
    c++/[c++11]enum
+   c++/[c++11]namespace
 
    c++/[c++11][stl]queue
    c++/[c++11][stl]stack
