@@ -12,5 +12,6 @@ c++
    c++/[c++11]stack
    c++/[stl]sort
    c++/[c++11]array
+   c++/enum
 
    c++/multiple definition of
