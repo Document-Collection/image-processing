@@ -1,5 +1,5 @@
 
-# [stl][stl]sort
+# [stl]sort
 
 参考：[详细解说 STL 排序(Sort) ](http://www.cppblog.com/mzty/archive/2005/12/15/1770.aspx)
 
@@ -40,6 +40,7 @@ void zprint(std::vector<int> myvector) {
 
 int main() {
     int myints[] = {32, 71, 12, 45, 26, 80, 53, 33};
+   c++/multiple definition of
     std::vector<int> myvector(myints, myints + 8);               // 32 71 12 45 26 80 53 33
 
     // using default comparison (operator <):
