@@ -8,6 +8,7 @@ c++
    :caption: 目录:
 
    c++/学习c++之路
+   c++/基本类型
 
    c++/keyword
    c++/stl
