@@ -13,7 +13,7 @@ c++
    c++/头文件
    c++/[c++11]类型别名设置
 
-
+   c++/[c++11]auto
    c++/keyword
    c++/stl
    c++/unit
