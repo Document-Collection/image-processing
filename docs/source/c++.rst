@@ -19,6 +19,7 @@ c++
 
    c++/[c++11]auto
    c++/[c++11]decltype
+   c++/[c++11]nullptr
    c++/keyword
    c++/stl
    c++/unit
