@@ -57,3 +57,14 @@ $ ./first hi zj
 1: hi
 2: zj
 ```
+
+## 启动注意事项
+
+参考：[Additional Startup Considerations](https://docs.microsoft.com/en-us/cpp/cpp/additional-startup-considerations?view=vs-2019)
+
+在`C++`中，对象构造（`constructor`）和析构（`destructor`）涉及执行用户代码（`executing user code`）。因此，重要的是要了解哪些初始化发生在进入`main`之前，哪些析构函数在退出`main`之后被调用
+
+在进入`main`之前进行以下初始化：
+
+1. 静态数据的默认初始化为零。在执行任何其他代码（包括运行时初始化）之前，所有没有显式初始值设定项的静态数据都设置为零。静态数据成员必须显式定义
+2. 在翻译单元中初始化全局静态对象。这可能发生在进入`main`之前，也可能发生在对象所在的翻译单元中的任何函数或对象首次使用之前
