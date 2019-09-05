@@ -37,6 +37,7 @@ c++
    c++/指针引用
 
    c++/指针概述
+   c++/const和volatile指针
 
    c++/[c++11]auto
    c++/[c++11]decltype
