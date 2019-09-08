@@ -40,6 +40,7 @@ c++
    c++/const和volatile指针
 
    c++/[c++11]智能指针概述
+   c++/[c++11]unique_ptr
 
    c++/[c++11]auto
    c++/[c++11]decltype
