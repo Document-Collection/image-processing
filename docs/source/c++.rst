@@ -41,6 +41,8 @@ c++
 
    c++/[c++11]智能指针概述
    c++/[c++11]unique_ptr
+   c++/[c++11]shared_ptr
+   c++/[c++11]weak_ptr
 
    c++/[c++11]auto
    c++/[c++11]decltype
