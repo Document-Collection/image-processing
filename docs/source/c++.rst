@@ -56,6 +56,8 @@ c++
    c++/继承
    c++/嵌套类定义
 
+   c++/模板概述
+
    c++/[c++11]auto
    c++/[c++11]decltype
    c++/[c++11]nullptr
