@@ -60,11 +60,16 @@ c++
    c++/函数模板
    c++/模板和名称解析
 
+   c++/STL概述
+   c++/[c++11][stl]queue
+   c++/[c++11][stl]stack
+   c++/[c++11][stl]array
+   c++/[stl]sort
+
    c++/[c++11]auto
    c++/[c++11]decltype
    c++/[c++11]nullptr
    c++/keyword
-   c++/stl
    c++/unit
 
    c++/multiple definition of
