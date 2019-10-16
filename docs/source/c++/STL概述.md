@@ -57,3 +57,13 @@
 ### 容器比较
 
 所有容器均重载了`operator==`，可用于保存相同类型元素的相同类型容器之间的比较，比如`vector<string>`和`vector<string>`之间的比较
+
+## 算法
+
+参考：[Algorithms (Modern C++)](https://docs.microsoft.com/en-us/cpp/cpp/algorithms-modern-cpp?view=vs-2019)
+
+`C++`实现了许多算法，常用的有以下几项：
+
+1. 遍历算法：`for_each`
+2. 搜索算法：`find_if/count_if/remove_if`
+3. 排序算法：`sort/lower_bound/upper_bound`

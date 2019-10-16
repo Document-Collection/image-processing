@@ -70,6 +70,8 @@ c++
    c++/[c++11][stl]queue
    c++/[c++11][stl]stack
    c++/[c++11][stl]array
+   c++/[c++11][stl]for_each
+   c++/[c++11][stl]find
    c++/[stl]sort
 
    c++/[c++11]auto
