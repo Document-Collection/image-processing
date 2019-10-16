@@ -61,6 +61,7 @@ c++
    c++/模板和名称解析
 
    c++/STL概述
+   c++/[c++11][stl]vector
    c++/[c++11][stl]queue
    c++/[c++11][stl]stack
    c++/[c++11][stl]array
