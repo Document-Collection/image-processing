@@ -73,6 +73,7 @@ c++
    c++/[c++11][stl]for_each
    c++/[c++11][stl]find
    c++/[stl]sort
+   c++/[c++11][stl][shuffle]随机重排列
 
    c++/[c++11]auto
    c++/[c++11]decltype
