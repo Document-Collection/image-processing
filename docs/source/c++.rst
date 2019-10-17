@@ -12,6 +12,7 @@ c++
    c++/main
    c++/声明和定义
    c++/[c++11]常量
+   c++/[c++11]nullptr
    c++/头文件
    c++/[c++11]类型别名设置
    c++/作用域
@@ -34,6 +35,9 @@ c++
    c++/标准转换
    c++/[c++11][cast]现代类型转换
    c++/[c++11]用户定义的类型转换
+
+   c++/[c++11]auto
+   c++/[c++11]decltype
    
    c++/[c++11]cv限定符
    c++/临时对象
@@ -85,11 +89,5 @@ c++
    c++/[c++11][stl]find
    c++/[stl]sort
    c++/[c++11][stl][shuffle]随机重排列
-
-   c++/[c++11]auto
-   c++/[c++11]decltype
-   c++/[c++11]nullptr
-   c++/keyword
-   c++/unit
 
    c++/multiple definition of
