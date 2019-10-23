@@ -93,3 +93,4 @@ c++
    c++/[c++11][stl][shuffle]随机重排列
 
    c++/multiple definition of
+   c++/warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
