@@ -18,3 +18,4 @@ OpenCV
    opencv/[Ubuntu 16.04][Anaconda3]OpenCV-4.1.0配置及测试
 
    opencv/[Point_]坐标点的保存和使用
+   opencv/[Scalar_]4维向量
