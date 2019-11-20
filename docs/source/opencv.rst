@@ -19,3 +19,4 @@ OpenCV
 
    opencv/[Point_]坐标点的保存和使用
    opencv/[Scalar_]4维向量
+   opencv/[copyMakeBorder]添加边界
