@@ -22,3 +22,4 @@ OpenCV
    opencv/[copyMakeBorder]添加边界
    
    opencv/[filter2D]线性滤波器
+   opencv/[Sobel]图像求导
