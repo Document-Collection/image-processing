@@ -17,6 +17,8 @@ OpenCV
    opencv/[Ubuntu 16.04][Anaconda3]OpenCV-4.1.0安装
    opencv/[Ubuntu 16.04][Anaconda3]OpenCV-4.1.0配置及测试
 
+   opencv/运行时间统计
+
    opencv/[Point_]坐标点的保存和使用
    opencv/[Scalar_]4维向量
    opencv/[copyMakeBorder]添加边界
