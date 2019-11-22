@@ -166,3 +166,15 @@ int main(int argc, char **argv) {
 1. `ksize`越大，图像轮廓越不明显，取`ksize=3`即可
 2. `scale`有助于显示更多图像轮廓信息，不过`scale`过大会导致过多的轮廓信息出现，取`scale=1`或`2`即可
 3. `delta`有助于提高图像整体亮度
+
+![](./imgs/sobel-1.png)
+
+`ksize=3, scale=1, delta=0`
+
+![](./imgs/sobel-2.png)
+
+`ksize=5, scale=1, delta=0`
+
+![](./imgs/sobel-3.png)
+
+`ksize=3, scale=2, delta=0`

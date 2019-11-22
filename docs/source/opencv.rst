@@ -23,3 +23,4 @@ OpenCV
    
    opencv/[filter2D]线性滤波器
    opencv/[Sobel]图像求导
+   opencv/[Scharr]图像求导
