@@ -31,3 +31,5 @@ OpenCV
 
    opencv/[threshold]基本阈值操作
    opencv/[旋转][平移][缩放]仿射变换
+
+   opencv/[line]绘制线段
