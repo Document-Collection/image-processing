@@ -19,6 +19,7 @@ OpenCV
 
    opencv/运行时间统计
    opencv/[normalize]标准化数据
+   opencv/[convertTo]数据转换
 
    opencv/[Point_]坐标点的保存和使用
    opencv/[Scalar_]4维向量
