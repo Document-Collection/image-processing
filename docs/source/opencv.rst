@@ -20,18 +20,19 @@ OpenCV
    opencv/运行时间统计
    opencv/[normalize]标准化数据
    opencv/[convertTo]数据转换
+   opencv/[vconcat][hconcat]按行合并以及按列合并
 
    opencv/[Point_]坐标点的保存和使用
    opencv/[Scalar_]4维向量
    opencv/[copyMakeBorder]添加边界
    
-   opencv/[vconcat][hconcat]按行合并以及按列合并
-
+   opencv/[cartToPolar]二维向量的大小和角度
    opencv/[filter2D]线性滤波器
    opencv/[Sobel]图像求导
    opencv/[Scharr]图像求导
    opencv/[Laplacian]图像求导
    opencv/[Canny]边缘检测
+
 
    opencv/[threshold]基本阈值操作
    opencv/[旋转][平移][缩放]仿射变换
