@@ -25,6 +25,8 @@ OpenCV
    opencv/[Scalar_]4维向量
    opencv/[copyMakeBorder]添加边界
    
+   opencv/[vconcat][hconcat]按行合并以及按列合并
+
    opencv/[filter2D]线性滤波器
    opencv/[Sobel]图像求导
    opencv/[Scharr]图像求导
