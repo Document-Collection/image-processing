@@ -11,6 +11,16 @@
 #include <vector>
 ```
 
+## 把一个vector追加到另一个vector
+
+参考：[Vector 把一个vector追加到另一个vector](https://blog.csdn.net/Fly_as_tadpole/article/details/82710781)
+
+```
+std::vector<int> src;
+std::vector<int> dest;
+dest.insert(dest.end(), src.begin(), src.end());
+```
+
 ## 使用
 
 ```
