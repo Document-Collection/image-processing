@@ -3,7 +3,7 @@ OpenCV
 ====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    opencv/OpenCV概述
@@ -16,6 +16,7 @@ OpenCV
    opencv/[Ubuntu 16.04][Anaconda3][OpenCV_Contrib 4.0.1]编译OpenCV4Android
    opencv/[Ubuntu 16.04][Anaconda3]OpenCV-4.1.0安装
    opencv/[Ubuntu 16.04][Anaconda3]OpenCV-4.1.0配置及测试
+   opencv/[python]Anaconda配置OpenCV
 
    opencv/运行时间统计
    opencv/[normalize]标准化数据
