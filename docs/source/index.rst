@@ -15,6 +15,7 @@
    anaconda
    clion
    c++
+   node
    python
    android
    pytorch
