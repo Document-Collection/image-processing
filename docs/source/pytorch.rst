@@ -13,5 +13,6 @@ pytorch
    pytorch/[conda]JupyterLab安装
    pytorch/Tensor
    pytorch/[torchvision]加载数据集、批量以及转换操作
+   pytorch/[torchvision]自定义数据集和预处理操作
    pytorch/LeNet-5定义
    pytorch/AlexNet定义
