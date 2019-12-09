@@ -1,6 +1,8 @@
 
 # [torchvision]加载数据集、批量以及转换操作
 
+参考：[Training a Classifier](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html#loading-and-normalizing-cifar10)
+
 `torchvision`代码库包含了流行的数据集、模型结构和用于计算机视觉的常见图像转换。参考[torchvision](https://pytorch.org/docs/stable/torchvision/index.html)
 
 ## 组织结构
