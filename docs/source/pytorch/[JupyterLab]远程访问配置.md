@@ -1,0 +1,58 @@
+
+# [JupyterLab]远程访问配置
+
+参考：
+
+[Ubuntu Jupyter 安装及远程访问配置](https://blog.csdn.net/Echo_y_d/article/details/83576841)
+
+[Running a notebook server](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html)
+
+配置`Jupyter Lab`，实现远程登录
+
+## 生成配置文件
+
+```
+$ jupyter notebook --generate-config
+```
+
+得到配置文件为`~/.jupyter/jupyter_notebook_config.py`
+
+## 生成密码
+
+```
+$ jupyter notebook password
+```
+
+配置登录密码，得到的密码保存在`~/.jupyter/jupyter_notebook_config.json`
+
+```
+$ cat jupyter_notebook_config.json 
+{
+  "NotebookApp": {
+    "password": "sha1:08e08xxx7976:f6xxxx8293eed64011ecf6xxxx6fb9ed1a8ef"
+  }
+```
+
+## 参数配置
+
+打开配置文件，加入如下设置：
+
+```
+# coding=UTF-8
+c = get_config()
+# Kernel config
+c.NotebookApp.ip = '*'                                  # 就是设置所有ip皆可访问
+c.NotebookApp.open_browser = False  # 禁止自动打开浏览器
+c.NotebookApp.password = 'sha1:117e0cc9673e:5ca67b637e0e2180027d36f8830c5711b7cf8e2f' # 使用之前设置的密码
+c.NotebookApp.port = 7788                        # 访问端口
+c.NotebookApp.allow_remote_access = True
+```
+
+## 启动
+
+完成上述操作后，即可启动`JupyterLab`服务器并登录
+
+```
+$ jupyter lab
+```
+
