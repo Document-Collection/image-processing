@@ -13,3 +13,4 @@ JupyterLab
    jupyter/[conda]JupyterLab安装
    jupyter/远程访问配置
    jupyter/基本功能介绍
+   jupyter/[PEP8]代码格式化
