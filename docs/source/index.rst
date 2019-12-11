@@ -20,3 +20,5 @@
    android
    pytorch
    matplotlib
+
+   jupyter

@@ -10,8 +10,6 @@ pytorch
    :caption: Contents:
 
    pytorch/引言
-   pytorch/[conda]JupyterLab安装
-   pytorch/[JupyterLab]远程访问配置
    pytorch/Tensor
    pytorch/[torchvision]加载数据集、批量以及转换操作
    pytorch/[torchvision]自定义数据集和预处理操作
