@@ -10,15 +10,18 @@
    :maxdepth: 2
    :caption: Contents:
 
-   opencv
    cnn
-   anaconda
-   clion
-   c++
-   node
-   python
    android
-   pytorch
+
+   opencv
    matplotlib
 
+   c++
+   python
+
+   anaconda
+   node
+
+   clion
+   pytorch
    jupyter

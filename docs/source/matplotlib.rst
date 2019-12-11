@@ -2,7 +2,7 @@
 
 
 
-matplotlib
+Matplotlib
 ==================================
 
 .. toctree::

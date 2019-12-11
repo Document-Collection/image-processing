@@ -1,6 +1,6 @@
 
 
-anaconda
+Anaconda
 ==================================
 
 .. toctree::

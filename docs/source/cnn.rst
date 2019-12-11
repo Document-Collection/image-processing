@@ -2,8 +2,7 @@
 
 
 
-
-cnn
+Convolutional Neural Network
 ==================================
 
 .. toctree::
