@@ -13,3 +13,4 @@ Python
    python/模块和包
    python/pytest
    python/[python]读取XML文件
+   python/[numpy]提取数组中属于某一条件的数据
