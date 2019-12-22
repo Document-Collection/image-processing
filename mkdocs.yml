@@ -1,0 +1,205 @@
+# 站点名称
+site_name: 'image processing'
+# 仓库链接
+repo_url: https://github.com/zjZSTU/image-processing.git
+# 作者
+site_author: 'zhujian'
+# 版权信息
+copyright: '2019, zhujian'
+# 源文件目录
+docs_dir: 'docs'
+# 生成静态文件目录
+site_dir: 'site'
+# 额外信息
+extra:
+    # 版本号
+    version: 0.2.0
+# 主题
+theme: 
+    # name: 'readthedocs'
+    # name: 'mkdocs'
+    name: 'material'
+# markdown扩展
+markdown_extensions:
+    - toc:
+        permalink: true
+    - pymdownx.arithmatex
+
+extra_javascript:
+    - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+# 导航
+nav:
+    - Home: index.md
+    - 语言篇:
+        - Python: 
+            - '类操作': './python/类操作.md'
+            - '装饰器': './python/装饰器.md'
+            - '[抽象基类]abc': './python/[抽象基类]abc.md'
+            - '模块和包': './python/模块和包.md'
+            - 'pytest': './python/pytest.md'
+            - '[python]读取XML文件': './python/[python]读取XML文件.md'
+            - '[numpy]提取数组中属于某一条件的数据': './python/[numpy]提取数组中属于某一条件的数据.md'
+        - C++11:
+            - '学习C++之路': './cplusplus/学习C++之路.md'
+            - 'C++标准': './cplusplus/C++标准.md'
+            - 'Get Started':
+                - 'Keyword':
+                    - 'main': './cplusplus/get-started/keywords/main.md'
+                    - 'namespace': './cplusplus/get-started/keywords/namespace.md'
+                    - 'cv限定符': './cplusplus/get-started/keywords/cv限定符.md'
+                    - 'size_t': './cplusplus/get-started/keywords/size_t.md'
+                    - 'nullptr': './cplusplus/get-started/keywords/nullptr.md'
+                    - 'enum': './cplusplus/get-started/keywords/enum.md'
+                - 'Basic Concepts':
+                    - '头文件': './cplusplus/get-started/basic-concepts/头文件.md'
+                    - '声明和定义': './cplusplus/get-started/basic-concepts/声明和定义.md'
+                    - '作用域': './cplusplus/get-started/basic-concepts/作用域.md'
+                    - '类型别名设置': './cplusplus/get-started/basic-concepts/类型别名设置.md'
+                    - '程序终止': './cplusplus/get-started/basic-concepts/程序终止.md'
+                    - '常量': './cplusplus/get-started/basic-concepts/常量.md'
+                    - '数组': './cplusplus/get-started/basic-concepts/数组.md'
+                    - '函数': './cplusplus/get-started/basic-concepts/函数.md'
+                    - '初始化': './cplusplus/get-started/basic-concepts/初始化.md'
+                    - '临时对象': './cplusplus/get-started/basic-concepts/临时对象.md'
+                    - '链接': './cplusplus/get-started/basic-concepts/链接.md'
+
+                - 'Pointer&Array':
+                    - '指针类型': './cplusplus/get-started/pointer-array/指针类型.md'
+                    - 'const指针和volatile指针': './cplusplus/get-started/pointer-array/const指针和volatile指针.md'
+                    - '指针和数组': './cplusplus/get-started/pointer-array/指针和数组.md'
+                    - '原始数组': './cplusplus/get-started/pointer-array/原始数组.md'
+                    - '原始指针': './cplusplus/get-started/pointer-array/原始指针.md'
+                    - '指针名和数组名的区别': './cplusplus/get-started/pointer-array/指针名和数组名的区别.md'
+                    - '二维数组和二级指针': './cplusplus/get-started/pointer-array/二维数组和二级指针.md'
+                    - '指针数组和数组指针': './cplusplus/get-started/pointer-array/指针数组和数组指针.md'
+                    - '指针常量和常量指针': './cplusplus/get-started/pointer-array/指针常量和常量指针.md'
+                    
+                - 'Type&Cast&Deduce':
+                    - '类型':
+                        - '类型概述': './cplusplus/get-started/type-cast-deduce/类型概述.md'
+                        - '基本类型': './cplusplus/get-started/type-cast-deduce/基本类型.md'
+                        - 'void类型': './cplusplus/get-started/type-cast-deduce/void类型.md'
+                        - '字符串类型': './cplusplus/get-started/type-cast-deduce/字符串类型.md'
+                    - '转换':
+                        - '标准转换': './cplusplus/get-started/type-cast-deduce/标准转换.md'
+                        - '现代类型转换': './cplusplus/get-started/type-cast-deduce/现代类型转换.md'
+                        - '用户定义的类型转换': './cplusplus/get-started/type-cast-deduce/用户定义的类型转换.md'
+                    - '推断':
+                        - 'auto': './cplusplus/get-started/type-cast-deduce/auto.md'
+                        - 'decltype': './cplusplus/get-started/type-cast-deduce/decltype.md'
+                - 'Operator Overload':
+                    - '操作符重载概述': './cplusplus/get-started/operator-overload/操作符重载概述.md'
+                    - '一元运算符重载': './cplusplus/get-started/operator-overload/一元运算符重载.md'
+                    - '二元运算符重载': './cplusplus/get-started/operator-overload/二元运算符重载.md'
+                    - '赋值运算符重载': './cplusplus/get-started/operator-overload/赋值运算符重载.md'
+                    - '函数调用运算符重载': './cplusplus/get-started/operator-overload/函数调用运算符重载.md'
+                    - '下标运算符重载': './cplusplus/get-started/operator-overload/下标运算符重载.md'
+
+            - Advanced:
+                - Smart Pointer:
+                    - '智能指针类型': './cplusplus/advanced/smart-pointer/智能指针类型.md'
+                    - 'unique_ptr': './cplusplus/advanced/smart-pointer/unique_ptr.md'
+                    - 'shared_ptr': './cplusplus/advanced/smart-pointer/shared_ptr.md'
+                    - 'weak_ptr': './cplusplus/advanced/smart-pointer/weak_ptr.md'
+                    - '使用原始指针还是智能指针': './cplusplus/advanced/smart-pointer/使用原始指针还是智能指针.md'
+                - Reference:
+                    - 'lvalue和rvalue': 'cplusplus/advanced/reference/lvalue和rvalue.md'
+                    - '引用概述': 'cplusplus/advanced/reference/引用概述.md'
+                    - '引用类型函数操作': 'cplusplus/advanced/reference/引用类型函数操作.md'
+                    - '指针引用': 'cplusplus/advanced/reference/指针引用.md'
+                - Class:
+                    - 类结构:
+                        - '类、结构体和共同体': './cplusplus/advanced/class/类、结构体和共同体.md'
+                        - '结构体': './cplusplus/advanced/class/结构体.md'
+                        - '类定义': './cplusplus/advanced/class/类定义.md'
+                        - '基本类结构': './cplusplus/advanced/class/基本类结构.md'
+                        - '嵌套类定义': './cplusplus/advanced/class/嵌套类定义.md'
+                        - '继承': './cplusplus/advanced/class/继承.md'
+                    - 构造器和析构器:
+                        - '构造器概述': './cplusplus/advanced/class/构造器概述.md'
+                        - '复制和移动操作': './cplusplus/advanced/class/复制和移动操作.md'
+                        - '析构器': './cplusplus/advanced/class/析构器.md'
+                    - 成员和函数:
+                        - '成员函数概述类型': './cplusplus/advanced/class/成员函数概述.md'
+                        - '成员访问控制': './cplusplus/advanced/class/成员访问控制.md'
+                        - 'static成员': './cplusplus/advanced/class/static成员.md'
+                        - '显式默认和删除函数': './cplusplus/advanced/class/显式默认和删除函数.md'
+                - Template:
+                    - '模板概述': './cplusplus/advanced/template/模板概述.md'
+                    - '函数模板': './cplusplus/advanced/template/函数模板.md'
+                    - '模板和名称解析': './cplusplus/advanced/template/模板和名称解析.md'
+                - STL:
+                    - 'STL概述': './cplusplus/advanced/stl/STL概述.md'
+                    - 'vector': './cplusplus/advanced/stl/vector.md'
+                    - 'map': './cplusplus/advanced/stl/map.md'
+                    - 'queue': './cplusplus/advanced/stl/queue.md'
+                    - 'stack': './cplusplus/advanced/stl/stack.md'
+                    - 'array': './cplusplus/advanced/stl/array.md'
+                    - 'for_each': './cplusplus/advanced/stl/for_each.md'
+                    - 'find': './cplusplus/advanced/stl/find.md'
+                    - 'sort': './cplusplus/advanced/stl/sort.md'
+                    - '[shuffle]随机重排列': './cplusplus/advanced/stl/[shuffle]随机重排列.md'
+
+            - FAQ:
+                - 'multiple definition of': './cplusplus/faq/multiple-definition-of.md'
+                - 'ISO C++ forbids converting a string constant to char*': './cplusplus/faq/ISO C++ forbids converting a string constant to char*.md'
+
+    - 实现篇:
+        - OpenCV:
+            - 'OpenCV概述': './opencv/OpenCV概述.md'
+            - '编译/安装/配置':
+                - 'OpenCV 3.x':
+                    - 'OpenCV-3.4.2源码安装': './opencv/install-configure/OpenCV-3.4.2源码安装.md'
+                    - 'OpenCV_Contrib-3.4.2源码安装': './opencv/install-configure/OpenCV_Contrib-3.4.2源码安装.md'
+                    - 'OpenCV-3.4.2测试': './opencv/install-configure/OpenCV-3.4.2测试.md'
+                - 'OpenCV 4.x':
+                    - 'OpenCV-4.0.1安装': './opencv/install-configure/OpenCV-4.0.1安装.md'
+                    - 'OpenCV-4.0.1测试': './opencv/install-configure/OpenCV-4.0.1测试.md'
+                    - '[OpenCV_Contrib-4.0.1]编译OpenCV4Android': './opencv/install-configure/[OpenCV_Contrib-4.0.1]编译OpenCV4Android.md'
+                    - 'OpenCV-4.1.0安装': './opencv/install-configure/OpenCV-4.1.0安装.md'
+                    - 'OpenCV-4.1.0配置及测试': './opencv/install-configure/OpenCV-4.1.0配置及测试.md'
+                - '[PyCharm]解码opencv python库': './opencv/install-configure/[PyCharm]解码opencv python库.md'
+                - '[OpenCV]Anaconda配置': './opencv/install-configure/[OpenCV]Anaconda配置.md'
+            - '图像处理及实现':
+                - 'Filter':
+                    - '[filter2D]线性滤波器': './opencv/code/[filter2D]线性滤波器.md'
+                    - '[Sobel]图像求导': './opencv/code/[Sobel]图像求导.md'
+                    - '[Scharr]图像求导': './opencv/code/[Scharr]图像求导.md'
+                    - '[Laplacian]图像求导': './opencv/code/[Laplacian]图像求导.md'
+                    - '[Canny]边缘检测': './opencv/code/[Canny]边缘检测.md'
+                - '运行时间统计': './opencv/code/运行时间统计.md'
+                - '[normalize]标准化数据': './opencv/code/[normalize]标准化数据.md'
+                - '[convertTo]数据转换': './opencv/code/[convertTo]数据转换.md'
+                - '[vconcat][hconcat]按行合并以及按列合并': './opencv/code/[vconcat][hconcat]按行合并以及按列合并.md'
+                - '[Point_]坐标点的保存和使用': './opencv/code/[Point_]坐标点的保存和使用.md'
+                - '[Scalar_]4维向量': './opencv/code/[Scalar_]4维向量.md'
+                - '[copyMakeBorder]添加边界': './opencv/code/[copyMakeBorder]添加边界.md'
+                - '[cartToPolar]二维向量的大小和角度': './opencv/code/[cartToPolar]二维向量的大小和角度.md'
+                - '[threshold]基本阈值操作': './opencv/code/[threshold]基本阈值操作.md'
+                - '[旋转][平移][缩放]仿射变换': './opencv/code/[旋转][平移][缩放]仿射变换.md'
+                - '[line]绘制线段': './opencv/code/[line]绘制线段.md'
+        - Matplotlib:
+            - '引言': './matplotlib/引言.md'
+            - '属性配置': './matplotlib/属性配置.md'
+            - '中文乱码': './matplotlib/中文乱码.md'
+            - '绘图关键概念Figure和Axes': './matplotlib/绘图关键概念Figure和Axes.md'
+            - '[译]Pyplot教程': './matplotlib/[译]Pyplot教程.md'
+            - '折线图': './matplotlib/折线图.md'
+            - '饼图': './matplotlib/饼图.md'
+            - '散点图': './matplotlib/散点图.md'
+            - '图像读取、显示和保存': './matplotlib/图像读取、显示和保存.md'
+            - '3d绘图': './matplotlib/3d绘图.md'
+            - '等高线图': './matplotlib/等高线图.md'
+        - PyTorch:
+            - '引言': './pytorch/引言.md'
+            - 'Tensor': './pytorch/Tensor.md'
+            - '[torchvision]加载数据集、批量以及转换操作': './pytorch/[torchvision]加载数据集、批量以及转换操作.md'
+            - '[torchvision]自定义数据集和预处理操作': './pytorch/[torchvision]自定义数据集和预处理操作.md'
+            - '[torchvision]ImageFolder使用': './pytorch/[torchvision]ImageFolder使用.md'
+            - 'LeNet-5定义': './pytorch/LeNet-5定义.md'
+            - 'AlexNet定义': './pytorch/AlexNet定义.md'
+        - 'CNN':
+            - '引言': './cnn/引言.md'
+            - '过拟合和欠拟合': './cnn/过拟合和欠拟合.md'
+            - '线性和非线性': './cnn/线性和非线性.md'
+            - 'AlexNet': './cnn/AlexNet.md'
