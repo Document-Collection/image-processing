@@ -10,4 +10,7 @@
     * [OpenCV](./opencv/OpenCV概述.md)
     * [Matplotlib](./matplotlib/引言.md)
     * [PyTorch](./pytorch/引言.md)
-    * [CNN](./cnn/引言.md)
+* 算法篇
+    * [机器学习](./algorithm/machine-learning.md)
+    * [深度学习](./algorithm/deep-learning.md)
+    * [最优化](./algorithm/optimization.md)
