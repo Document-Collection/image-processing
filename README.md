@@ -12,8 +12,11 @@
 * 实现篇
     * [OpenCV](https://zj-image-processing.readthedocs.io/zh_CN/latest/opencv/OpenCV%E6%A6%82%E8%BF%B0/)
     * [Matplotlib]([./matplotlib/引言.md](https://zj-image-processing.readthedocs.io/zh_CN/latest/matplotlib/%E5%BC%95%E8%A8%80/))
-    * [PyTorch]([./pytorch/引言.md](https://zj-image-processing.readthedocs.io/zh_CN/latest/pytorch/%E5%BC%95%E8%A8%80/))
-    * [CNN]([./cnn/引言.md](https://zj-image-processing.readthedocs.io/zh_CN/latest/cnn/%E5%BC%95%E8%A8%80/))
+    * [PyTorch](https://zj-image-processing.readthedocs.io/zh_CN/latest/pytorch/%E5%BC%95%E8%A8%80/)
+* 算法篇
+    * [机器学习](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/machine-learning/)
+    * [深度学习](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/deep-learning/)
+    * [最优化](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/optimization/)
 
 ## 内容列表
 
