@@ -11,7 +11,7 @@
     * [C++11](https://zj-image-processing.readthedocs.io/zh_CN/latest/cplusplus/%E5%AD%A6%E4%B9%A0C++%E4%B9%8B%E8%B7%AF/)
 * 实现篇
     * [OpenCV](https://zj-image-processing.readthedocs.io/zh_CN/latest/opencv/OpenCV%E6%A6%82%E8%BF%B0/)
-    * [Matplotlib]([./matplotlib/引言.md](https://zj-image-processing.readthedocs.io/zh_CN/latest/matplotlib/%E5%BC%95%E8%A8%80/))
+    * [Matplotlib](https://zj-image-processing.readthedocs.io/zh_CN/latest/matplotlib/%E5%BC%95%E8%A8%80/)
     * [PyTorch](https://zj-image-processing.readthedocs.io/zh_CN/latest/pytorch/%E5%BC%95%E8%A8%80/)
 * 算法篇
     * [机器学习](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/machine-learning/)
