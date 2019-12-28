@@ -190,6 +190,7 @@ nav:
             - '图像读取、显示和保存': './matplotlib/图像读取、显示和保存.md'
             - '3d绘图': './matplotlib/3d绘图.md'
             - '等高线图': './matplotlib/等高线图.md'
+            - '矩阵显示': './matplotlib/矩阵显示.md'
         - PyTorch:
             - '引言': './pytorch/引言.md'
             - 'Tensor': './pytorch/Tensor.md'
