@@ -37,6 +37,7 @@ nav:
             - '[抽象基类]abc': './python/[抽象基类]abc.md'
             - '模块和包': './python/模块和包.md'
             - 'pytest': './python/pytest.md'
+            - '[logging]日志记录': './python/[logging]日志记录.md'
             - '[python]读取XML文件': './python/[python]读取XML文件.md'
             - '[numpy]提取数组中属于某一条件的数据': './python/[numpy]提取数组中属于某一条件的数据.md'
         - C++11:
