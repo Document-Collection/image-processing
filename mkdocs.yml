@@ -195,11 +195,13 @@ nav:
         - PyTorch:
             - '引言': './pytorch/引言.md'
             - 'Tensor': './pytorch/Tensor.md'
-            - '[torchvision]加载数据集、批量以及转换操作': './pytorch/[torchvision]加载数据集、批量以及转换操作.md'
-            - '[torchvision]自定义数据集和预处理操作': './pytorch/[torchvision]自定义数据集和预处理操作.md'
-            - '[torchvision]ImageFolder使用': './pytorch/[torchvision]ImageFolder使用.md'
+            - '[译]保存和加载模型': './pytorch/[译]保存和加载模型.md'
             - 'LeNet-5定义': './pytorch/LeNet-5定义.md'
             - 'AlexNet定义': './pytorch/AlexNet定义.md'
+            - TorchVision:
+                - '[torchvision]加载数据集、批量以及转换操作': './pytorch/[torchvision]加载数据集、批量以及转换操作.md'
+                - '[torchvision]自定义数据集和预处理操作': './pytorch/[torchvision]自定义数据集和预处理操作.md'
+                - '[torchvision]ImageFolder使用': './pytorch/[torchvision]ImageFolder使用.md'    
         # - 'CNN':
         #     - '引言': './cnn/引言.md'
         #     - '过拟合和欠拟合': './cnn/过拟合和欠拟合.md'
