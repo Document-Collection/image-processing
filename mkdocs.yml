@@ -38,8 +38,10 @@ nav:
             - '模块和包': './python/模块和包.md'
             - 'pytest': './python/pytest.md'
             - '[logging]日志记录': './python/[logging]日志记录.md'
-            - '[python]读取XML文件': './python/[python]读取XML文件.md'
             - '[numpy]提取数组中属于某一条件的数据': './python/[numpy]提取数组中属于某一条件的数据.md'
+            - XML:
+                - '[python]读取XML文件': './python/[python]读取XML文件.md'
+                - '[xmltodict]读取XML文件': './python/[xmltodict]读取XML文件.md'
         - C++11:
             - '学习C++之路': './cplusplus/学习C++之路.md'
             - 'C++标准': './cplusplus/C++标准.md'
