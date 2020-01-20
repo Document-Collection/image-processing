@@ -3,6 +3,16 @@
 
 ## 环境变量
 
+参考[Ubuntu 18.04配置OpenCV 4.2.0](https://www.cnblogs.com/chenzhen0530/p/12109868.html)
+
+编辑文件`/path/to/opencv-4.2.0/install/lib/pkgconfig/opencv4.pc`
+
+```
+includedir_old=${prefix}/include/opencv4/opencv
+# 修改为
+includedir_old=${prefix}/include/opencv4/opencv2
+```
+
 编辑`~/.bashrc`
 
 ```
@@ -11,6 +21,8 @@ export OpenCV_DIR=/home/zj/opencv/opencv-4.2.0/install
 export PKG_CONFIG_PATH=${OpenCV_DIR}/lib/pkgconfig
 export CMAKE_PREFIX_PATH=${OpenCV_DIR}
 ```
+
+*重启系统*
 
 ## 查询
 
