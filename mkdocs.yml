@@ -161,6 +161,8 @@ nav:
                     - '[OpenCV_Contrib-4.0.1]编译OpenCV4Android': './opencv/install-configure/[OpenCV_Contrib-4.0.1]编译OpenCV4Android.md'
                     - 'OpenCV-4.1.0安装': './opencv/install-configure/OpenCV-4.1.0安装.md'
                     - 'OpenCV-4.1.0配置及测试': './opencv/install-configure/OpenCV-4.1.0配置及测试.md'
+                    - 'OpenCV-4.2.0安装': './opencv/install-configure/OpenCV-4.2.0安装.md'
+                    - 'OpenCV-4.2.0配置及测试': './opencv/install-configure/OpenCV-4.2.0配置及测试.md'
                 - '[PyCharm]解码opencv python库': './opencv/install-configure/[PyCharm]解码opencv python库.md'
                 - '[OpenCV]Anaconda配置': './opencv/install-configure/[OpenCV]Anaconda配置.md'
             - '图像处理及实现':
