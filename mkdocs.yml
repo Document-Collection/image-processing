@@ -39,6 +39,7 @@ nav:
             - 'pytest': './python/pytest.md'
             - '[logging]日志记录': './python/[logging]日志记录.md'
             - '[numpy]提取数组中属于某一条件的数据': './python/[numpy]提取数组中属于某一条件的数据.md'
+            - '[numpy]数据保存和加载': './python/[numpy]数据保存和加载.md'
             - XML:
                 - '[python]读取XML文件': './python/[python]读取XML文件.md'
                 - '[xmltodict]读取XML文件': './python/[xmltodict]读取XML文件.md'
