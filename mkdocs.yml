@@ -203,6 +203,7 @@ nav:
             - '[译]保存和加载模型': './pytorch/[译]保存和加载模型.md'
             - '自定义损失函数': './pytorch/自定义损失函数.md'
             - 'one-hot编码': './pytorch/one-hot编码.md'
+            - '[softmax]分类概率计算': './pytorch/[softmax]分类概率计算.md'
             - Model:
                 - 'LeNet-5定义': './pytorch/LeNet-5定义.md'
                 - 'AlexNet定义': './pytorch/AlexNet定义.md'
