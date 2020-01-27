@@ -1,5 +1,5 @@
 
-# Softmax使用
+# [softmax]分类概率计算
 
 参考：
 
