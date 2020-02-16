@@ -6,14 +6,14 @@
 
 图像处理是一个综合性研究和开发领域，涉及基础概念、图像算法、代码实现等等。本文档小结相关的内容
 
-* 语言篇
+* 编程语言
     * [Python](https://zj-image-processing.readthedocs.io/zh_CN/latest/python/%E7%B1%BB%E6%93%8D%E4%BD%9C/)
     * [C++11](https://zj-image-processing.readthedocs.io/zh_CN/latest/cplusplus/%E5%AD%A6%E4%B9%A0C++%E4%B9%8B%E8%B7%AF/)
-* 实现篇
+* 代码库
     * [OpenCV](https://zj-image-processing.readthedocs.io/zh_CN/latest/opencv/OpenCV%E6%A6%82%E8%BF%B0/)
     * [Matplotlib](https://zj-image-processing.readthedocs.io/zh_CN/latest/matplotlib/%E5%BC%95%E8%A8%80/)
     * [PyTorch](https://zj-image-processing.readthedocs.io/zh_CN/latest/pytorch/%E5%BC%95%E8%A8%80/)
-* 算法篇
+* 算法
     * [机器学习](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/machine-learning/)
     * [深度学习](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/deep-learning/)
     * [最优化](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/optimization/)
