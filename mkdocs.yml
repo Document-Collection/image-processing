@@ -227,3 +227,4 @@ nav:
         - 'PlantUML':
             - 'PlantUML简介': './uml/plantuml/PlantUML简介.md'
             - '本地安装和使用': './uml/plantuml/本地安装和使用.md'
+            - 'VSCode插件使用': './uml/plantuml/VSCode插件使用.md'
