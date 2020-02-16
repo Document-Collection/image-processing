@@ -30,7 +30,7 @@ extra_javascript:
 # 导航
 nav:
     - Home: index.md
-    - 语言篇:
+    - 编程语言:
         - Python: 
             - '类操作': './python/类操作.md'
             - '装饰器': './python/装饰器.md'
@@ -148,7 +148,7 @@ nav:
                 - 'multiple definition of': './cplusplus/faq/multiple-definition-of.md'
                 - 'ISO C++ forbids converting a string constant to char*': './cplusplus/faq/ISO C++ forbids converting a string constant to char*.md'
 
-    - 实现篇:
+    - 代码库:
         - OpenCV:
             - 'OpenCV概述': './opencv/OpenCV概述.md'
             - '编译/安装/配置':
@@ -216,7 +216,7 @@ nav:
         #     - '过拟合和欠拟合': './cnn/过拟合和欠拟合.md'
         #     - '线性和非线性': './cnn/线性和非线性.md'
         #     - 'AlexNet': './cnn/AlexNet.md'
-    - 算法篇:
+    - 算法:
         - '机器学习': './algorithm/machine-learning.md'
         - '深度学习': './algorithm/deep-learning.md'
         - '最优化': './algorithm/optimization.md'
