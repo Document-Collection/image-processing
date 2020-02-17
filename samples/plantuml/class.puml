@@ -1,0 +1,14 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Dummy {
+    String data
+    void methods()  
+}
+
+class Flight {
+    +flightNumber: Integer
+    -departureTime: Data
+    hahah(): void
+}
+@enduml
