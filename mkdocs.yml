@@ -225,6 +225,7 @@ nav:
         - 'UML':
             - '统一建模语言UML': './uml/统一建模语言UML.md'
             - '[译][wiki]Class diagram': './uml/[译][wiki]Class diagram.md'
+            - '类图小结': './uml/类图小结.md'
         - 'PlantUML':
             - 'PlantUML简介': './uml/plantuml/PlantUML简介.md'
             - '本地安装和使用': './uml/plantuml/本地安装和使用.md'
