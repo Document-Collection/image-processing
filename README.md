@@ -17,6 +17,9 @@
     * [机器学习](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/machine-learning/)
     * [深度学习](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/deep-learning/)
     * [最优化](https://zj-image-processing.readthedocs.io/zh_CN/latest/algorithm/optimization/)
+* 建模
+    * [UML](https://zj-image-processing.readthedocs.io/zh_CN/latest/uml/%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80UML/)
+    * [PlantUML](https://zj-image-processing.readthedocs.io/zh_CN/latest/uml/plantuml/PlantUML%E7%AE%80%E4%BB%8B/)
 
 ## 内容列表
 
