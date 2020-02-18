@@ -1,5 +1,5 @@
 
-# [译][wiki]Class diagram
+# [译][wiki]Class-Diagram
 
 学习UML类图的基本概念，在wiki上发现了比较详细的介绍，内容不多但是很精炼，所以翻译一下，以便后续的学习
 
