@@ -6,12 +6,12 @@ skinparam classAttributeIconSize 0
 '     void methods()  
 ' }
 
-class Flight {
-    +flightNumber: Integer
-    -departureTime: Data
+' class Flight {
+'     +flightNumber: Integer
+'     -departureTime: Data
     
-    # hahah(): void
-}
+'     # hahah(): void
+' }
 
 ' ' 泛化 空心三角形+实线
 ' Class01 <|-- Class02
@@ -25,4 +25,7 @@ class Flight {
 ' Class09 <-- Class10
 ' ' 依赖 箭头+虚线
 ' Class11 <.. Class12
+
+namespaceA.Class01 <|-- namespaceB.Class02
+
 @enduml
