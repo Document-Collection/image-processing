@@ -40,19 +40,42 @@ skinparam classAttributeIconSize 0
 
 ' Class05 --> "1" Class06
 
-class Dummy01 {
-    String data
-    void methods()
+' class Dummy01 {
+'     String data
+'     void methods()
+' }
+
+' class Dummy02 {
+'     data: String
+'     methods(): void
+' }
+
+' class Dummy03 {
+'     String data
+'     void methods() override
+' }
+
+class default {
+    + int field01
+    - float field02
+
+    + void method01()
+    - float method02()
 }
 
-class Dummy02 {
-    data: String
-    methods(): void
-}
-
-class Dummy03 {
-    String data
-    void methods() override
+class custom {
+    + int field01
+    ' 两格点号表示虚线
+    ..
+    - float field02
+    ' 两格下划线表示实线
+    __
+    ' 可以在线段中间添加文字
+    .. 构造器 ..
+    custom()
+    __ override __
+    + void method01()
+    - float method02()
 }
 
 @enduml
