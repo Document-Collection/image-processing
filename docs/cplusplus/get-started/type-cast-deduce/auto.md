@@ -7,6 +7,8 @@
 
 [placeholder type specifiers](https://en.cppreference.com/w/cpp/language/auto)
 
+## 定义
+
 关键字`auto`是`c++11`新增的，其目的是用于自动类型推断。语法如下：
 
 ```
@@ -28,3 +30,32 @@ auto declarator initializer;
 2. 表达式模板辅助类型，比如`(valarray+valarray)`
 
 网上也有关于`auto`的讨论：[如何评价 C++ 11 auto 关键字？](https://www.zhihu.com/question/35517805)
+
+## 示例
+
+```
+# BEFORE
+float getSum(int A, float B) {
+    return A + B;
+}
+
+int main(int argc, char *argv[]) {
+    float sum = getSum(2, 33.33);
+
+    vector<int> src;
+    src.emplace_back(1);
+    src.emplace_back(4);
+    src.emplace_back(3);
+    for (vector<int>::iterator it = src.begin(); it != src.end(); it++) {
+        cout << *it << " ";
+    }
+}
+
+# AFTER
+...
+    auto sum = getSum(2, 33.33);
+    ...
+    for (auto it = src.begin(); it != src.end(); it++) {
+        cout << *it << " ";
+    }
+```
