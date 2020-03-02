@@ -212,6 +212,7 @@ nav:
                 - '[torchvision]自定义数据集和预处理操作': './pytorch/[torchvision]自定义数据集和预处理操作.md'
                 - '[torchvision]ImageFolder使用': './pytorch/[torchvision]ImageFolder使用.md'    
                 - '[sampler]采样器': './pytorch/[sampler]采样器.md'
+                - '自定义采样器': './pytorch/自定义采样器.md'
         # - 'CNN':
         #     - '引言': './cnn/引言.md'
         #     - '过拟合和欠拟合': './cnn/过拟合和欠拟合.md'
