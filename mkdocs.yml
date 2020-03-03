@@ -32,6 +32,7 @@ nav:
     - Home: index.md
     - 编程语言:
         - Python: 
+            - '[requirements.txt]依赖文件生成和使用': './python/[requirements.txt]依赖文件生成和使用.md'
             - '类操作': './python/类操作.md'
             - '装饰器': './python/装饰器.md'
             - '[抽象基类]abc': './python/[抽象基类]abc.md'
