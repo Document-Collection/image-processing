@@ -23,7 +23,7 @@
 
 ### 高斯滤波
 
-参考：[高斯滤波](https://www.zhujian.tech/posts/80b530f2.html#more)
+参考：[高斯滤波](https://blog.zhujian.life/posts/80b530f2.html#more)
 
 通过高斯滤波去除图像噪声的影响，常用`5x5`大小的高斯核，设置`\sigma=1.4`
 

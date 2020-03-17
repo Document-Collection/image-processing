@@ -5,7 +5,7 @@
 
 原文教程：[Writing Custom Datasets, DataLoaders and Transforms](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html)
 
-翻译地址：[[译]Writing Custom Datasets, DataLoaders and Transforms](https://zhujian.tech/posts/aa0415d3.html#more)
+翻译地址：[[译]Writing Custom Datasets, DataLoaders and Transforms](https://blog.zhujian.life/posts/aa0415d3.html#more)
 
 通过`torchvision`操作自定义数据集，需要**重新实现**数据集类以及与预处理方法
 
