@@ -184,7 +184,9 @@ nav:
                 - '[cartToPolar]二维向量的大小和角度': './opencv/code/[cartToPolar]二维向量的大小和角度.md'
                 - '[threshold]基本阈值操作': './opencv/code/[threshold]基本阈值操作.md'
                 - '[旋转][平移][缩放]仿射变换': './opencv/code/[旋转][平移][缩放]仿射变换.md'
-                - '[line]绘制线段': './opencv/code/[line]绘制线段.md'
+            - 图像绘制:
+                - '[line]绘制线段': './opencv/draw/[line]绘制线段.md'
+                - '[rectangle]绘制边框': './opencv/draw/[rectangle]绘制边框.md'
         - Matplotlib:
             - '引言': './matplotlib/引言.md'
             - '属性配置': './matplotlib/属性配置.md'
