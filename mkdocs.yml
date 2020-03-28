@@ -193,6 +193,7 @@ nav:
             - '属性配置': './matplotlib/属性配置.md'
             - '中文乱码': './matplotlib/中文乱码.md'
             - '绘图关键概念Figure和Axes': './matplotlib/绘图关键概念Figure和Axes.md'
+            - '手动设置轴刻度间隔': './matplotlib/手动设置轴刻度间隔.md'
             - '[译]Pyplot教程': './matplotlib/[译]Pyplot教程.md'
             - '折线图': './matplotlib/折线图.md'
             - '饼图': './matplotlib/饼图.md'
