@@ -206,6 +206,7 @@ nav:
             - '引言': './pytorch/引言.md'
             - 'Tensor': './pytorch/Tensor.md'
             - '[译]保存和加载模型': './pytorch/[译]保存和加载模型.md'
+            - '加载部分预训练模型': './pytorch/加载部分预训练模型.md'
             - '自定义损失函数': './pytorch/自定义损失函数.md'
             - 'one-hot编码': './pytorch/one-hot编码.md'
             - '[softmax]分类概率计算': './pytorch/[softmax]分类概率计算.md'
