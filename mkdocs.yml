@@ -220,6 +220,9 @@ nav:
                 - '[torchvision]ImageFolder使用': './pytorch/[torchvision]ImageFolder使用.md'    
                 - '[sampler]采样器': './pytorch/[sampler]采样器.md'
                 - '自定义采样器': './pytorch/自定义采样器.md'
+            - 错误:
+                - 'RuntimeError: CUDA error: initialization error': './pytorch/error/RuntimeError: CUDA error: initialization error.md'
+                - 'RuntimeError: invalid argument 0: Sizes of tensors must match': './pytorch/error/RuntimeError: invalid argument 0: Sizes of tensors must match.md'
         # - 'CNN':
         #     - '引言': './cnn/引言.md'
         #     - '过拟合和欠拟合': './cnn/过拟合和欠拟合.md'
