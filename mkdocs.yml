@@ -211,6 +211,7 @@ nav:
             - 'one-hot编码': './pytorch/one-hot编码.md'
             - '[softmax]分类概率计算': './pytorch/[softmax]分类概率计算.md'
             - '[AdaptiveMaxPool][AdaptiveAvgPool]自适应池化层操作': './pytorch/[AdaptiveMaxPool][AdaptiveAvgPool]自适应池化层操作.md'
+            - '固定部分参数进行训练': './pytorch/固定部分参数进行训练.md'
             - Model:
                 - 'LeNet-5定义': './pytorch/LeNet-5定义.md'
                 - 'AlexNet定义': './pytorch/AlexNet定义.md'
