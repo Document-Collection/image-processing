@@ -205,6 +205,7 @@ nav:
         - PyTorch:
             - '引言': './pytorch/引言.md'
             - 'Tensor': './pytorch/Tensor.md'
+            - '[Conv][Pool]实现原理': './pytorch/[Conv][Pool]实现原理.md'
             - '[数据归一化]均值和方差设置': './pytorch/[数据归一化]均值和方差设置.md'
             - '[译]保存和加载模型': './pytorch/[译]保存和加载模型.md'
             - '加载部分预训练模型': './pytorch/加载部分预训练模型.md'
