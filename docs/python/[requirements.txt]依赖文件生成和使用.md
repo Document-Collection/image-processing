@@ -76,6 +76,8 @@ opencv-python-aarch64 == 3.3.0.1
 opencv-python-headless == 4.2.0.32
 ```
 
+**Note：应该查看`requirements.txt`文件，去除有些不存在的库，比如工程目录`utils`**
+
 ### 小结
 
 需要结合上述两个工具：
