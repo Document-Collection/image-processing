@@ -42,6 +42,7 @@ nav:
             - '[numpy]提取数组中属于某一条件的数据': './python/[numpy]提取数组中属于某一条件的数据.md'
             - '[numpy]数据保存和加载': './python/[numpy]数据保存和加载.md'
             - '[numpy]增加或者减少一维': './python/[numpy]增加或者减少一维.md'
+            - '[list]排序': './python/[list]排序.md'
             - XML:
                 - '[python]读取XML文件': './python/[python]读取XML文件.md'
                 - '[xmltodict]读取XML文件': './python/[xmltodict]读取XML文件.md'
