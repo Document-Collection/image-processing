@@ -223,6 +223,7 @@ nav:
                 - 'LeNet-5定义': './pytorch/model/LeNet-5定义.md'
                 - 'AlexNet定义': './pytorch/model/AlexNet定义.md'
             - 数据处理:
+                - '数据预处理': './pytorch/preprocessing/数据预处理.md'
                 - '[数据归一化]均值和方差设置': './pytorch/preprocessing/[数据归一化]均值和方差设置.md'
                 - '[sampler]采样器': './pytorch/preprocessing/[sampler]采样器.md'
                 - '自定义采样器': './pytorch/preprocessing/自定义采样器.md'
