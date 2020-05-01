@@ -1,6 +1,14 @@
 
 # [Ten Crops]多样本检测
 
+参考：
+
+[PyTorch数据增强，TenCrop的用法](https://www.jianshu.com/p/aba1142c0453)
+
+[How to properly do 10-crop testing on Imagenet?](https://discuss.pytorch.org/t/how-to-properly-do-10-crop-testing-on-imagenet/11341)
+
+[[Pytorch]Pytorch中图像的基本操作(TenCrop)](https://blog.csdn.net/weixin_44538273/article/details/88406404)
+
 在检测阶段，采集一张样本中的多个裁剪，平均其预测结果，有助于更高的检测精度
 
 完整实现参考`py/ten-crops.py`
