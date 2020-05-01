@@ -12,7 +12,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
-    src = Image.open('../data/butterfly.jpg')
+    src = Image.open('../data/lena.jpg')
 
     # 预处理顺序如下：
     # 1. 按较短边缩放
@@ -23,7 +23,10 @@ if __name__ == '__main__':
         transforms.Resize(224),
         transforms.RandomCrop(224),
         transforms.RandomHorizontalFlip(),
-        transforms.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1, hue=0.1)
+        transforms.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1, hue=0.1),
+        transforms.ToTensor(),
+        transforms.RandomErasing(),
+        transforms.ToPILImage()
     ])
 
     cols = 3
