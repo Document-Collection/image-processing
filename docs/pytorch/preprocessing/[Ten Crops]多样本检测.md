@@ -11,7 +11,7 @@
 
 在检测阶段，采集一张样本中的多个裁剪，平均其预测结果，有助于更高的检测精度
 
-完整实现参考`py/ten-crops.py`
+完整实现参考`py/data_preprocessing/ten-crops.py`
 
 ## FiveCrops/TenCrops
 

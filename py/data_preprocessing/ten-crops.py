@@ -39,7 +39,7 @@ def plot(src, dsts):
 
 
 def draw_five_crop():
-    src = Image.open('./data/butterfly.jpg')
+    src = Image.open('../data/butterfly.jpg')
 
     transform = transforms.Compose([
         transforms.Resize(256),
@@ -52,7 +52,7 @@ def draw_five_crop():
 
 
 if __name__ == '__main__':
-    src = Image.open('./data/butterfly.jpg')
+    src = Image.open('../data/butterfly.jpg')
 
     transform = transforms.Compose([
         transforms.Resize(256),
