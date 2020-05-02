@@ -70,7 +70,7 @@ def plot_loss_lr(res_dict):
 
     plt.xlabel('iteration')
     plt.ylabel('loss (smoothed)')
-    for k, v in res_dict:
+    for k, v in res_dict.items():
         losses = v['loss']
         plt.plot(losses, label=k)
     plt.legend()
