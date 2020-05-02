@@ -61,7 +61,6 @@ def find_wd(data_loader, model, criterion, optimizer, device, beta=0.98):
     losses = []
     for inputs, labels in data_loader:
         batch_num += 1
-        print('{}: {}'.format(batch_num, lr))
 
         # As before, get the loss for this mini-batch of inputs/outputs
         inputs = inputs.to(device)
@@ -77,7 +76,7 @@ def find_wd(data_loader, model, criterion, optimizer, device, beta=0.98):
 
         # Stop if the loss is exploding
         if batch_num > 1 and smoothed_loss > 4 * best_loss:
-            return log_lrs, losses
+            return losses
 
         # Record the best loss
         if smoothed_loss < best_loss or batch_num == 1:
@@ -121,4 +120,6 @@ if __name__ == '__main__':
 
         losses = find_wd(data_loaders['train'], model, criterion, optimizer, device)
         res_dict[str(weight_decay)] = {'loss': losses}
+        print('{} done'.format(weight_decay))
     util.plot_loss_lr(res_dict)
+    print('done')
