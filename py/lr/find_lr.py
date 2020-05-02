@@ -8,7 +8,6 @@
 """
 
 import math
-import torch
 import torch.optim as optim
 from torch.utils.data import DataLoader
 import torchvision.transforms as transforms
@@ -30,27 +29,9 @@ def load_data(data_root_dir='../data/'):
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])
 
-    # 测试阶段 Ten Crop test
-    test_transform = transforms.Compose([
-        transforms.Resize(256),
-        transforms.TenCrop(224),
-        transforms.Lambda(lambda crops: torch.stack([transforms.ToTensor()(crop) for crop in crops])),
-        transforms.Lambda(lambda crops: torch.stack(
-            [transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))(crop) for crop in crops]))
-    ])
-
-    data_loaders = {}
-    data_sizes = {}
-    for name in ['train', 'test']:
-        if name == 'train':
-            data_set = CIFAR100(data_root_dir, train=True, download=True, transform=train_transform)
-            data_loader = DataLoader(data_set, batch_size=96, shuffle=True, num_workers=8)
-        else:
-            data_set = CIFAR100(data_root_dir, train=False, download=True, transform=test_transform)
-            data_loader = DataLoader(data_set, batch_size=48, shuffle=True, num_workers=8)
-        data_loaders[name] = data_loader
-        data_sizes[name] = len(data_set)
-    return data_loaders, data_sizes
+    data_set = CIFAR100(data_root_dir, train=True, download=True, transform=train_transform)
+    data_loader = DataLoader(data_set, batch_size=96, shuffle=True, num_workers=8)
+    return data_loader
 
 
 def find_lr(data_loader, model, criterion, optimizer, device, init_value=1e-8, final_value=10., beta=0.98):
@@ -105,9 +86,7 @@ if __name__ == '__main__':
     device = util.get_device()
     # device = torch.device('cpu')
 
-    data_loaders, data_sizes = load_data()
-    print(data_loaders)
-    print(data_sizes)
+    data_loader = load_data()
 
     res_loss = dict()
     res_top1_acc = dict()
@@ -124,7 +103,7 @@ if __name__ == '__main__':
         optimizer = optim.Adam(model.parameters(), lr=1e-8)
 
         print('lr: {}'.format(optimizer.param_groups[0]['lr']))
-        log_lrs, losses = find_lr(data_loaders['train'], model, criterion, optimizer, device,
+        log_lrs, losses = find_lr(data_loader, model, criterion, optimizer, device,
                                   init_value=1e-8, final_value=10., beta=0.98)
         print('lr: {}'.format(optimizer.param_groups[0]['lr']))
         util.plot(log_lrs, losses)

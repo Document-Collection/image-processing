@@ -7,8 +7,6 @@
 @description: 
 """
 
-import math
-import torch
 import torch.optim as optim
 from torch.utils.data import DataLoader
 import torchvision.transforms as transforms
@@ -30,27 +28,9 @@ def load_data(data_root_dir='../data/'):
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])
 
-    # 测试阶段 Ten Crop test
-    test_transform = transforms.Compose([
-        transforms.Resize(256),
-        transforms.TenCrop(224),
-        transforms.Lambda(lambda crops: torch.stack([transforms.ToTensor()(crop) for crop in crops])),
-        transforms.Lambda(lambda crops: torch.stack(
-            [transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))(crop) for crop in crops]))
-    ])
-
-    data_loaders = {}
-    data_sizes = {}
-    for name in ['train', 'test']:
-        if name == 'train':
-            data_set = CIFAR100(data_root_dir, train=True, download=True, transform=train_transform)
-            data_loader = DataLoader(data_set, batch_size=96, shuffle=True, num_workers=8)
-        else:
-            data_set = CIFAR100(data_root_dir, train=False, download=True, transform=test_transform)
-            data_loader = DataLoader(data_set, batch_size=48, shuffle=True, num_workers=8)
-        data_loaders[name] = data_loader
-        data_sizes[name] = len(data_set)
-    return data_loaders, data_sizes
+    data_set = CIFAR100(data_root_dir, train=True, download=True, transform=train_transform)
+    data_loader = DataLoader(data_set, batch_size=96, shuffle=True, num_workers=8)
+    return data_loader
 
 
 def find_wd(data_loader, model, criterion, optimizer, device, beta=0.98):
@@ -88,7 +68,6 @@ def find_wd(data_loader, model, criterion, optimizer, device, beta=0.98):
         # Do the SGD step
         loss.backward()
         optimizer.step()
-        lr_scheduler.step()
 
     return losses
 
@@ -97,9 +76,7 @@ if __name__ == '__main__':
     device = util.get_device()
     # device = torch.device('cpu')
 
-    data_loaders, data_sizes = load_data()
-    print(data_loaders)
-    print(data_sizes)
+    data_loader = load_data()
 
     res_loss = dict()
     res_top1_acc = dict()
@@ -116,9 +93,8 @@ if __name__ == '__main__':
 
         criterion = SmoothLabelCritierion(label_smoothing=0.1)
         optimizer = optim.Adam(model.parameters(), lr=3e-4, weight_decay=weight_decay)
-        lr_scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=len(data_loaders['train']) - 1)
 
-        losses = find_wd(data_loaders['train'], model, criterion, optimizer, device)
+        losses = find_wd(data_loader, model, criterion, optimizer, device)
         res_dict[str(weight_decay)] = {'loss': losses}
         print('{} done'.format(weight_decay))
     util.plot_loss_lr(res_dict)
