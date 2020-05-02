@@ -65,6 +65,21 @@ def plot(log_lrs, losses):
     plt.show()
 
 
+def plot_loss_lr(res_dict):
+    fig = plt.figure()
+
+    plt.title('loss-lr')
+    plt.xlabel('learning rate (log scale)')
+    plt.ylabel('loss (smoothed)')
+    for k, v in res_dict:
+        log_lrs = v['lr']
+        losses = v['loss']
+        plt.plot(log_lrs, losses, label=k)
+    plt.legend()
+    plt.savefig('./loss-lr.png')
+    plt.show()
+
+
 def save_png(title, res_dict):
     # x_major_locator = MultipleLocator(1)
     # ax = plt.gca()
