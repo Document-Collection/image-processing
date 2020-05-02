@@ -47,7 +47,7 @@ def load_data(data_root_dir='../data/'):
             data_loader = DataLoader(data_set, batch_size=96, shuffle=True, num_workers=8)
         else:
             data_set = CIFAR100(data_root_dir, train=False, download=True, transform=test_transform)
-            data_loader = DataLoader(data_set, batch_size=96, shuffle=True, num_workers=8)
+            data_loader = DataLoader(data_set, batch_size=48, shuffle=True, num_workers=8)
         data_loaders[name] = data_loader
         data_sizes[name] = len(data_set)
     return data_loaders, data_sizes
