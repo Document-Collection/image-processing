@@ -68,13 +68,11 @@ def plot(log_lrs, losses):
 def plot_loss_lr(res_dict):
     fig = plt.figure()
 
-    plt.title('loss-lr')
-    plt.xlabel('learning rate (log scale)')
+    plt.xlabel('iteration')
     plt.ylabel('loss (smoothed)')
     for k, v in res_dict:
-        log_lrs = v['lr']
         losses = v['loss']
-        plt.plot(log_lrs, losses, label=k)
+        plt.plot(losses, label=k)
     plt.legend()
     plt.savefig('./loss-lr.png')
     plt.show()

@@ -53,16 +53,12 @@ def load_data(data_root_dir='../data/'):
     return data_loaders, data_sizes
 
 
-def find_lr(data_loader, model, criterion, optimizer, device, init_value=1e-8, final_value=10., beta=0.98):
+def find_wd(data_loader, model, criterion, optimizer, device, beta=0.98):
     num = len(data_loader) - 1
-    mult = (final_value / init_value) ** (1 / num)
-    lr = init_value
-    optimizer.param_groups[0]['lr'] = lr
     avg_loss = 0.
     best_loss = 0.
     batch_num = 0
     losses = []
-    log_lrs = []
     for inputs, labels in data_loader:
         batch_num += 1
         print('{}: {}'.format(batch_num, lr))
@@ -89,16 +85,13 @@ def find_lr(data_loader, model, criterion, optimizer, device, init_value=1e-8, f
 
         # Store the values
         losses.append(smoothed_loss)
-        log_lrs.append(math.log10(lr))
 
         # Do the SGD step
         loss.backward()
         optimizer.step()
+        lr_scheduler.step()
 
-        # Update the lr for the next step
-        lr *= mult
-        optimizer.param_groups[0]['lr'] = lr
-    return log_lrs, losses
+    return losses
 
 
 if __name__ == '__main__':
@@ -123,9 +116,9 @@ if __name__ == '__main__':
         model = model.to(device)
 
         criterion = SmoothLabelCritierion(label_smoothing=0.1)
-        optimizer = optim.Adam(model.parameters(), lr=1e-8, weight_decay=weight_decay)
+        optimizer = optim.Adam(model.parameters(), lr=3e-4, weight_decay=weight_decay)
+        lr_scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=len(data_loaders['train']) - 1)
 
-        log_lrs, losses = find_lr(data_loaders['train'], model, criterion, optimizer, device,
-                                  init_value=1e-8, final_value=10., beta=0.98)
-        res_dict[str(weight_decay)] = {'loss': losses, 'lr': log_lrs}
+        losses = find_wd(data_loaders['train'], model, criterion, optimizer, device)
+        res_dict[str(weight_decay)] = {'loss': losses}
     util.plot_loss_lr(res_dict)
