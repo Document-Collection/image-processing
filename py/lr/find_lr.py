@@ -224,7 +224,9 @@ if __name__ == '__main__':
         optimizer = optim.Adam(model.parameters(), lr=1e-8)
         lr_scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=2)
 
+        print('lr: {}'.format(optimizer.param_groups['lr'][0]))
         log_lrs, losses = find_lr(data_loaders['train'], model, criterion, optimizer, device)
+        print('lr: {}'.format(optimizer.param_groups['lr'][0]))
         util.plot(log_lrs, losses)
 
         # util.check_dir('../data/models/')

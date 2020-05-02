@@ -27,6 +27,8 @@ def plot(log_lrs, losses):
     fig = plt.figure()
 
     plt.title('loss-lr')
+    plt.xlabel('learning rate (log scale)')
+    plt.ylabel('loss (smoothed)')
     plt.plot(log_lrs, losses)
 
     plt.savefig('./loss-lr.png')
