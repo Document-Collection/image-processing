@@ -54,7 +54,7 @@ def load_data(data_root_dir='../data/'):
     return data_loaders, data_sizes
 
 
-def train_model(data_loaders, data_sizes, model_name, model, criterion, optimizer,
+def train_model(data_loaders, data_sizes, model_name, model, criterion, optimizer, lr_scheduler,
                 num_epochs=25, device=None):
     since = time.time()
 
@@ -115,6 +115,10 @@ def train_model(data_loaders, data_sizes, model_name, model, criterion, optimize
                 # statistics
                 running_loss += loss.item() * inputs.size(0)
 
+            if phase == 'train':
+                print('{} lr: {}'.format(epoch, optimizer.param_groups[0]['lr']))
+                lr_scheduler.step()
+
             epoch_loss = running_loss / data_sizes[phase]
             epoch_top1_acc = running_top1_acc / len(data_loaders[phase])
             epoch_top5_acc = running_top5_acc / len(data_loaders[phase])
@@ -135,8 +139,8 @@ def train_model(data_loaders, data_sizes, model_name, model, criterion, optimize
 
         # 每训练10轮保存一次
         # if (epoch + 1) % 10 == 0:
-            # util.save_model(model.cpu(), '../data/models/%s_%d.pth' % (model_name, epoch + 1))
-            # model = model.to(device)
+        # util.save_model(model.cpu(), '../data/models/%s_%d.pth' % (model_name, epoch + 1))
+        # model = model.to(device)
 
     time_elapsed = time.time() - since
     print('Training {} complete in {:.0f}m {:.0f}s'.format(model_name, time_elapsed // 60, time_elapsed % 60))
@@ -172,10 +176,11 @@ if __name__ == '__main__':
             optimizer = optim.Adam(model.parameters(), lr=1e-3)
         else:
             optimizer = optim.Adam(model.parameters(), lr=3e-4)
+        lr_scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, num_epochs)
 
         util.check_dir('../data/models/')
         best_model, loss_dict, top1_acc_dict, top5_acc_dict = train_model(
-            data_loaders, data_sizes, name, model, criterion, optimizer,
+            data_loaders, data_sizes, name, model, criterion, optimizer, lr_scheduler,
             num_epochs=num_epochs, device=device)
         # 保存最好的模型参数
         # util.save_model(best_model.cpu(), '../data/models/best_%s.pth' % name)
