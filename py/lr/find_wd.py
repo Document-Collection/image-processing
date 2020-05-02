@@ -77,12 +77,7 @@ if __name__ == '__main__':
     # device = torch.device('cpu')
 
     data_loader = load_data()
-
-    res_loss = dict()
-    res_top1_acc = dict()
-    res_top5_acc = dict()
     num_classes = 100
-    num_epochs = 100
 
     res_dict = dict()
     for weight_decay in [0, 1e-3, 1e-4, 1e-5]:

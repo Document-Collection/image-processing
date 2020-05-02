@@ -87,12 +87,7 @@ if __name__ == '__main__':
     # device = torch.device('cpu')
 
     data_loader = load_data()
-
-    res_loss = dict()
-    res_top1_acc = dict()
-    res_top5_acc = dict()
     num_classes = 100
-    num_epochs = 100
     for name in ['squeezenet']:
         model = SqueezeNet(num_classes=num_classes)
         model.eval()
@@ -102,8 +97,6 @@ if __name__ == '__main__':
         criterion = SmoothLabelCritierion(label_smoothing=0.1)
         optimizer = optim.Adam(model.parameters(), lr=1e-8)
 
-        print('lr: {}'.format(optimizer.param_groups[0]['lr']))
         log_lrs, losses = find_lr(data_loader, model, criterion, optimizer, device,
                                   init_value=1e-8, final_value=10., beta=0.98)
-        print('lr: {}'.format(optimizer.param_groups[0]['lr']))
         util.plot(log_lrs, losses)
