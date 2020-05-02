@@ -29,4 +29,5 @@ def plot(log_lrs, losses):
     plt.title('loss-lr')
     plt.plot(log_lrs, losses)
 
+    plt.savefig('./loss-lr.png')
     plt.show()
