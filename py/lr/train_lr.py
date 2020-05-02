@@ -2,7 +2,7 @@
 
 """
 @date: 2020/5/2 下午9:01
-@file: train.py
+@file: train_lr.py
 @author: zj
 @description: 
 """
@@ -48,7 +48,7 @@ def load_data(data_root_dir='../data/'):
             data_loader = DataLoader(data_set, batch_size=96, shuffle=True, num_workers=8)
         else:
             data_set = CIFAR100(data_root_dir, train=False, download=True, transform=test_transform)
-            data_loader = DataLoader(data_set, batch_size=96, shuffle=True, num_workers=8)
+            data_loader = DataLoader(data_set, batch_size=48, shuffle=True, num_workers=8)
         data_loaders[name] = data_loader
         data_sizes[name] = len(data_set)
     return data_loaders, data_sizes
@@ -65,9 +65,9 @@ def train_model(data_loaders, data_sizes, model_name, model, criterion, optimize
     loss_dict = {'train': [], 'test': []}
     top1_acc_dict = {'train': [], 'test': []}
     top5_acc_dict = {'train': [], 'test': []}
-    for epoch in range(num_epochs):
+    for epoch in range(1, num_epochs + 1):
 
-        print('{} - Epoch {}/{}'.format(model_name, epoch + 1, num_epochs))
+        print('{} - Epoch {}/{}'.format(model_name, epoch, num_epochs))
         print('-' * 10)
 
         # Each epoch has a training and test phase
@@ -116,7 +116,7 @@ def train_model(data_loaders, data_sizes, model_name, model, criterion, optimize
                 running_loss += loss.item() * inputs.size(0)
 
             if phase == 'train':
-                print('{} lr: {}'.format(epoch, optimizer.param_groups[0]['lr']))
+                print('lr: {}'.format(optimizer.param_groups[0]['lr']))
                 lr_scheduler.step()
 
             epoch_loss = running_loss / data_sizes[phase]
@@ -138,8 +138,8 @@ def train_model(data_loaders, data_sizes, model_name, model, criterion, optimize
                 best_top5_acc = epoch_top5_acc
 
         # 每训练10轮保存一次
-        # if (epoch + 1) % 10 == 0:
-        # util.save_model(model.cpu(), '../data/models/%s_%d.pth' % (model_name, epoch + 1))
+        # if epoch % 10 == 0:
+        # util.save_model(model.cpu(), '../data/models/%s_%d.pth' % (model_name, epoch))
         # model = model.to(device)
 
     time_elapsed = time.time() - since
