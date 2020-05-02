@@ -68,6 +68,8 @@ def find_lr(data_loader, model, criterion, optimizer, device, init_value=1e-8, f
     log_lrs = []
     for inputs, labels in data_loader:
         batch_num += 1
+        print('{}: {}'.format(batch_num, lr))
+
         # As before, get the loss for this mini-batch of inputs/outputs
         inputs = inputs.to(device)
         labels = labels.to(device)
@@ -77,7 +79,7 @@ def find_lr(data_loader, model, criterion, optimizer, device, init_value=1e-8, f
         loss = criterion(outputs, labels)
 
         # Compute the smoothed loss
-        avg_loss = beta * avg_loss + (1 - beta) * loss.data[0]
+        avg_loss = beta * avg_loss + (1 - beta) * loss.item()
         smoothed_loss = avg_loss / (1 - beta ** batch_num)
 
         # Stop if the loss is exploding
@@ -102,103 +104,103 @@ def find_lr(data_loader, model, criterion, optimizer, device, init_value=1e-8, f
     return log_lrs, losses
 
 
-def train_model(data_loaders, data_sizes, model_name, model, criterion, optimizer, lr_scheduler,
-                num_epochs=25, device=None):
-    since = time.time()
-
-    best_model_weights = copy.deepcopy(model.state_dict())
-    best_top1_acc = 0.0
-    best_top5_acc = 0.0
-
-    loss_dict = {'train': [], 'test': []}
-    top1_acc_dict = {'train': [], 'test': []}
-    top5_acc_dict = {'train': [], 'test': []}
-    for epoch in range(num_epochs):
-
-        print('{} - Epoch {}/{}'.format(model_name, epoch + 1, num_epochs))
-        print('-' * 10)
-
-        # Each epoch has a training and test phase
-        for phase in ['train', 'test']:
-            if phase == 'train':
-                model.train()  # Set model to training mode
-            else:
-                model.eval()  # Set model to evaluate mode
-
-            running_loss = 0.0
-            # running_corrects = 0
-            running_top1_acc = 0.0
-            running_top5_acc = 0.0
-
-            # Iterate over data.
-            for inputs, labels in data_loaders[phase]:
-                inputs = inputs.to(device)
-                labels = labels.to(device)
-
-                # zero the parameter gradients
-                optimizer.zero_grad()
-
-                # forward
-                # track history if only in train
-                with torch.set_grad_enabled(phase == 'train'):
-                    if phase == 'test':
-                        N, N_crops, C, H, W = inputs.size()
-                        result = model(inputs.view(-1, C, H, W))  # fuse batch size and ncrops
-                        outputs = result.view(N, N_crops, -1).mean(1)  # avg over crops
-                    else:
-                        outputs = model(inputs)
-                    # print(outputs.shape)
-                    # _, preds = torch.max(outputs, 1)
-                    loss = criterion(outputs, labels)
-
-                    # compute top-k accuray
-                    topk_list = metrics.topk_accuracy(outputs, labels, topk=(1, 5))
-                    running_top1_acc += topk_list[0]
-                    running_top5_acc += topk_list[1]
-
-                    # backward + optimize only if in training phase
-                    if phase == 'train':
-                        loss.backward()
-                        optimizer.step()
-
-                # statistics
-                running_loss += loss.item() * inputs.size(0)
-                # running_corrects += torch.sum(preds == labels.data)
-            if phase == 'train':
-                lr_scheduler.step(epoch + 1)
-                print('lr: {}'.format(lr_scheduler.get_lr()))
-
-            epoch_loss = running_loss / data_sizes[phase]
-            epoch_top1_acc = running_top1_acc / len(data_loaders[phase])
-            epoch_top5_acc = running_top5_acc / len(data_loaders[phase])
-
-            loss_dict[phase].append(epoch_loss)
-            top1_acc_dict[phase].append(epoch_top1_acc)
-            top5_acc_dict[phase].append(epoch_top5_acc)
-
-            print('{} Loss: {:.4f} Top-1 Acc: {:.4f} Top-5 Acc: {:.4f}'.format(
-                phase, epoch_loss, epoch_top1_acc, epoch_top5_acc))
-
-            # deep copy the model
-            if phase == 'test' and epoch_top1_acc > best_top1_acc:
-                best_top1_acc = epoch_top1_acc
-                best_model_weights = copy.deepcopy(model.state_dict())
-            if phase == 'test' and epoch_top5_acc > best_top5_acc:
-                best_top5_acc = epoch_top5_acc
-
-        # 每训练10轮保存一次
-        if (epoch + 1) % 10 == 0:
-            util.save_model(model.cpu(), '../data/models/%s_%d.pth' % (model_name, epoch + 1))
-            model = model.to(device)
-
-    time_elapsed = time.time() - since
-    print('Training {} complete in {:.0f}m {:.0f}s'.format(model_name, time_elapsed // 60, time_elapsed % 60))
-    print('Best test Top-1 Acc: {:4f}'.format(best_top1_acc))
-    print('Best test Top-5 Acc: {:4f}'.format(best_top5_acc))
-
-    # load best model weights
-    model.load_state_dict(best_model_weights)
-    return model, loss_dict, top1_acc_dict, top5_acc_dict
+# def train_model(data_loaders, data_sizes, model_name, model, criterion, optimizer, lr_scheduler,
+#                 num_epochs=25, device=None):
+#     since = time.time()
+#
+#     best_model_weights = copy.deepcopy(model.state_dict())
+#     best_top1_acc = 0.0
+#     best_top5_acc = 0.0
+#
+#     loss_dict = {'train': [], 'test': []}
+#     top1_acc_dict = {'train': [], 'test': []}
+#     top5_acc_dict = {'train': [], 'test': []}
+#     for epoch in range(num_epochs):
+#
+#         print('{} - Epoch {}/{}'.format(model_name, epoch + 1, num_epochs))
+#         print('-' * 10)
+#
+#         # Each epoch has a training and test phase
+#         for phase in ['train', 'test']:
+#             if phase == 'train':
+#                 model.train()  # Set model to training mode
+#             else:
+#                 model.eval()  # Set model to evaluate mode
+#
+#             running_loss = 0.0
+#             # running_corrects = 0
+#             running_top1_acc = 0.0
+#             running_top5_acc = 0.0
+#
+#             # Iterate over data.
+#             for inputs, labels in data_loaders[phase]:
+#                 inputs = inputs.to(device)
+#                 labels = labels.to(device)
+#
+#                 # zero the parameter gradients
+#                 optimizer.zero_grad()
+#
+#                 # forward
+#                 # track history if only in train
+#                 with torch.set_grad_enabled(phase == 'train'):
+#                     if phase == 'test':
+#                         N, N_crops, C, H, W = inputs.size()
+#                         result = model(inputs.view(-1, C, H, W))  # fuse batch size and ncrops
+#                         outputs = result.view(N, N_crops, -1).mean(1)  # avg over crops
+#                     else:
+#                         outputs = model(inputs)
+#                     # print(outputs.shape)
+#                     # _, preds = torch.max(outputs, 1)
+#                     loss = criterion(outputs, labels)
+#
+#                     # compute top-k accuray
+#                     topk_list = metrics.topk_accuracy(outputs, labels, topk=(1, 5))
+#                     running_top1_acc += topk_list[0]
+#                     running_top5_acc += topk_list[1]
+#
+#                     # backward + optimize only if in training phase
+#                     if phase == 'train':
+#                         loss.backward()
+#                         optimizer.step()
+#
+#                 # statistics
+#                 running_loss += loss.item() * inputs.size(0)
+#                 # running_corrects += torch.sum(preds == labels.data)
+#             if phase == 'train':
+#                 lr_scheduler.step(epoch + 1)
+#                 print('lr: {}'.format(lr_scheduler.get_lr()))
+#
+#             epoch_loss = running_loss / data_sizes[phase]
+#             epoch_top1_acc = running_top1_acc / len(data_loaders[phase])
+#             epoch_top5_acc = running_top5_acc / len(data_loaders[phase])
+#
+#             loss_dict[phase].append(epoch_loss)
+#             top1_acc_dict[phase].append(epoch_top1_acc)
+#             top5_acc_dict[phase].append(epoch_top5_acc)
+#
+#             print('{} Loss: {:.4f} Top-1 Acc: {:.4f} Top-5 Acc: {:.4f}'.format(
+#                 phase, epoch_loss, epoch_top1_acc, epoch_top5_acc))
+#
+#             # deep copy the model
+#             if phase == 'test' and epoch_top1_acc > best_top1_acc:
+#                 best_top1_acc = epoch_top1_acc
+#                 best_model_weights = copy.deepcopy(model.state_dict())
+#             if phase == 'test' and epoch_top5_acc > best_top5_acc:
+#                 best_top5_acc = epoch_top5_acc
+#
+#         # 每训练10轮保存一次
+#         if (epoch + 1) % 10 == 0:
+#             util.save_model(model.cpu(), '../data/models/%s_%d.pth' % (model_name, epoch + 1))
+#             model = model.to(device)
+#
+#     time_elapsed = time.time() - since
+#     print('Training {} complete in {:.0f}m {:.0f}s'.format(model_name, time_elapsed // 60, time_elapsed % 60))
+#     print('Best test Top-1 Acc: {:4f}'.format(best_top1_acc))
+#     print('Best test Top-5 Acc: {:4f}'.format(best_top5_acc))
+#
+#     # load best model weights
+#     model.load_state_dict(best_model_weights)
+#     return model, loss_dict, top1_acc_dict, top5_acc_dict
 
 
 if __name__ == '__main__':
@@ -222,11 +224,10 @@ if __name__ == '__main__':
 
         criterion = SmoothLabelCritierion(label_smoothing=0.1)
         optimizer = optim.Adam(model.parameters(), lr=1e-8)
-        lr_scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=2)
 
-        print('lr: {}'.format(optimizer.param_groups['lr'][0]))
+        print('lr: {}'.format(optimizer.param_groups[0]['lr']))
         log_lrs, losses = find_lr(data_loaders['train'], model, criterion, optimizer, device)
-        print('lr: {}'.format(optimizer.param_groups['lr'][0]))
+        print('lr: {}'.format(optimizer.param_groups[0]['lr']))
         util.plot(log_lrs, losses)
 
         # util.check_dir('../data/models/')
