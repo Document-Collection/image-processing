@@ -165,8 +165,8 @@ if __name__ == '__main__':
     res_top1_acc = dict()
     res_top5_acc = dict()
     num_classes = 100
-    num_epochs = 30
-    for name in ['3e-4 -> 3e-5', '3e-4 -> 0']:
+    num_epochs = 50
+    for name in ['3e-4 -> 1e-4', '3e-4 -> 3e-5', '3e-4 -> 0']:
         model = SqueezeNet(num_classes=num_classes)
         model.eval()
         # print(model)
@@ -174,7 +174,9 @@ if __name__ == '__main__':
 
         criterion = SmoothLabelCritierion(label_smoothing=0.1)
         optimizer = optim.Adam(model.parameters(), lr=3e-4, weight_decay=3e-5)
-        if name == '3e-4 -> 3e-5':
+        if name == '3e-4 -> 1e-4':
+            lr_scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, num_epochs - 5, eta_min=1e-4)
+        elif name == '3e-4 -> 3e-5':
             lr_scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, num_epochs - 5, eta_min=3e-5)
         else:
             lr_scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, num_epochs - 5, eta_min=0)
