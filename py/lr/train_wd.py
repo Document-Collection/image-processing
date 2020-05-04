@@ -118,7 +118,7 @@ def train_model(data_loaders, data_sizes, model_name, model, criterion, optimize
 
             if phase == 'train':
                 print('lr: {}'.format(optimizer.param_groups[0]['lr']))
-                lr_scheduler.step(epoch=epoch)
+                lr_scheduler.step()
 
             epoch_loss = running_loss / data_sizes[phase]
             epoch_top1_acc = running_top1_acc / len(data_loaders[phase])
