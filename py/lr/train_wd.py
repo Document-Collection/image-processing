@@ -173,7 +173,7 @@ if __name__ == '__main__':
         model = model.to(device)
 
         criterion = SmoothLabelCritierion(label_smoothing=0.1)
-        optimizer = optim.Adam(model.parameters(), lr=3e-4)
+        optimizer = optim.Adam(model.parameters(), lr=3e-4, weight_decay=3e-5)
         if name == '3e-4 -> 3e-5':
             lr_scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, num_epochs - 5, eta_min=3e-5)
         else:
