@@ -81,6 +81,7 @@ if __name__ == '__main__':
 
     res_dict = dict()
     for weight_decay in [0, 1e-3, 1e-4, 1e-5]:
+        # for weight_decay in [3e-5, 1e-4, 3e-4]:
         model = SqueezeNet(num_classes=num_classes)
         model.eval()
         # print(model)
