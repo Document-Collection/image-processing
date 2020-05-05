@@ -14,6 +14,8 @@
     * [机器学习](./algorithm/machine-learning.md)
     * [深度学习](./algorithm/deep-learning.md)
     * [最优化](./algorithm/optimization.md)
+    * [数据集](./algorithm/dataset.md)
+    * [评价标准](./algorithm/evaluation-metrics.md)
 * 建模
     * [UML](./uml/统一建模语言UML.md)
     * [PlantUML](./uml/plantuml/PlantUML简介.md)

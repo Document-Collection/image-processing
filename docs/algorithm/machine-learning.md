@@ -12,15 +12,18 @@
     * [softmax回归](https://blog.zhujian.life/posts/2626bec3.html)
         * [从numpy到pytorch实现softmax回归](https://blog.zhujian.life/posts/1c195604.html)
         * [使用softmax回归进行mnist分类](https://blog.zhujian.life/posts/dd673751.html)
+        * [[PyTorch][Numpy][Softmax]计算概率](https://blog.zhujian.life/posts/f6b1346b.html)
     * 分类器
         * [KNN分类器](https://blog.zhujian.life/posts/1ee29eaf.html)
         * [线性SVM分类器](https://blog.zhujian.life/posts/ebe205e.html)
         * [逻辑回归分类器](https://blog.zhujian.life/posts/96ce93d9.html)
         * [softmax分类器](https://blog.zhujian.life/posts/e043b7fb.html)
         * [神经网络分类器](https://blog.zhujian.life/posts/81a57a7.html)
+        * [线性SVM分类器-PyTorch实现](https://blog.zhujian.life/posts/4d25cbab.html)
 * 目标分割
     * [基于图的图像分割-引言](https://blog.zhujian.life/posts/2e594804.html)
     * [基于图的图像分割-工程源码](https://blog.zhujian.life/posts/a4b1a6d9.html)
     * [基于图的图像分割-OpenCV源码](https://blog.zhujian.life/posts/18052054.html)
 * 目标检测/识别
     * [[译]作用于目标识别的选择性搜索](https://blog.zhujian.life/posts/1cb6a408.html)
+    * [选择性搜索算法小结](https://blog.zhujian.life/posts/58ff6dae.html)

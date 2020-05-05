@@ -218,6 +218,7 @@ nav:
             - '[softmax]分类概率计算': './pytorch/[softmax]分类概率计算.md'
             - '[AdaptiveMaxPool][AdaptiveAvgPool]自适应池化层操作': './pytorch/[AdaptiveMaxPool][AdaptiveAvgPool]自适应池化层操作.md'
             - '[Ten Crops]多样本检测': './pytorch/[Ten Crops]多样本检测.md'
+            - '可视化': './pytorch/可视化.md'
             - Model:
                 - '固定部分参数进行训练': './pytorch/model/固定部分参数进行训练.md'
                 - '查询模型参数总数': './pytorch/model/查询模型参数总数.md'    
@@ -246,6 +247,8 @@ nav:
         - '机器学习': './algorithm/machine-learning.md'
         - '深度学习': './algorithm/deep-learning.md'
         - '最优化': './algorithm/optimization.md'
+        - '数据集': './algorithm/dataset.md'
+        - '评价标准': './algorithm/evaluation-metrics.md'
 
     - 建模:
         - 'UML':
