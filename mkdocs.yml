@@ -219,6 +219,7 @@ nav:
             - '[AdaptiveMaxPool][AdaptiveAvgPool]自适应池化层操作': './pytorch/[AdaptiveMaxPool][AdaptiveAvgPool]自适应池化层操作.md'
             - '[Ten Crops]多样本检测': './pytorch/[Ten Crops]多样本检测.md'
             - '可视化': './pytorch/可视化.md'
+            - '[benchmark]训练加速': './pytorch/[benchmark]训练加速.md'
             - Model:
                 - '固定部分参数进行训练': './pytorch/model/固定部分参数进行训练.md'
                 - '查询模型参数总数': './pytorch/model/查询模型参数总数.md'    
