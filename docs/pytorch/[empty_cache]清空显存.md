@@ -21,4 +21,6 @@ do_evaluation(cfg, model, distributed=args.distributed)
 
 [Why does torch.cuda.empty_cache() make the GPU utilization near 0 and slow down the training time?](https://discuss.pytorch.org/t/why-does-torch-cuda-empty-cache-make-the-gpu-utilization-near-0-and-slow-down-the-training-time/65196)
 
+[pytorch GPU显存释放的问题？](https://www.zhihu.com/question/68509057/answer/566619040)
+
 并不推荐在实现中频繁调用该函数。仅在显存不足时进行调用即可
