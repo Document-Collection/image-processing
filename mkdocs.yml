@@ -222,8 +222,9 @@ nav:
             - '可视化': './pytorch/可视化.md'
             - '[transpose][permute]维度转换': './pytorch/[transpose][permute]维度转换.md'
             - Cuda:
-                - '[empty_cache]清空显存': './pytorch/[empty_cache]清空显存.md'
-                - '[benchmark]训练加速': './pytorch/[benchmark]训练加速.md'
+                - '[empty_cache]清空显存': './pytorch/cuda/[empty_cache]清空显存.md'
+                - '[benchmark]训练加速': './pytorch/cuda/[benchmark]训练加速.md'
+                - '监控显存使用': './pytorch/cuda/监控显存使用.md'
             - Model:
                 - '固定部分参数进行训练': './pytorch/model/固定部分参数进行训练.md'
                 - '查询模型参数总数': './pytorch/model/查询模型参数总数.md'    
