@@ -51,6 +51,7 @@ nav:
                 - '[numpy]数据保存和加载': './python/[numpy]数据保存和加载.md'
                 - '[numpy]增加或者减少一维': './python/[numpy]增加或者减少一维.md'
                 - '[numpy]元素累加': './python/[numpy]元素累加.md'
+                - '[numpy][clip]限制取值范围': './python/[numpy][clip]限制取值范围.md'
         - C++11:
             - '学习C++之路': './cplusplus/学习C++之路.md'
             - 'C++标准': './cplusplus/C++标准.md'
