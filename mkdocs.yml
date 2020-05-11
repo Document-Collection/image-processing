@@ -40,6 +40,7 @@ nav:
             - 'pytest': './python/pytest.md'
             - '[logging]日志记录': './python/[logging]日志记录.md'
             - '[list]排序': './python/[list]排序.md'
+            - '[enumerate]遍历': './python/[enumerate]遍历.md'
             - 配置文件读写:
                 - XML:
                     - '[python]读取XML文件': './python/[python]读取XML文件.md'
