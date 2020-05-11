@@ -222,6 +222,7 @@ nav:
             - '[Ten Crops]多样本检测': './pytorch/[Ten Crops]多样本检测.md'
             - '可视化': './pytorch/可视化.md'
             - '[transpose][permute]维度转换': './pytorch/[transpose][permute]维度转换.md'
+            - '[clamp]限制取值范围': './pytorch/[clamp]限制取值范围.md'
             - Cuda:
                 - '[empty_cache]清空显存': './pytorch/cuda/[empty_cache]清空显存.md'
                 - '[benchmark]训练加速': './pytorch/cuda/[benchmark]训练加速.md'
