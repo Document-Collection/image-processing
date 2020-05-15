@@ -224,6 +224,7 @@ nav:
             - '可视化': './pytorch/可视化.md'
             - '[transpose][permute]维度转换': './pytorch/[transpose][permute]维度转换.md'
             - '[clamp]限制取值范围': './pytorch/[clamp]限制取值范围.md'
+            - '[index_fill]在给定维度填充指定val': './pytorch/[index_fill]在给定维度填充指定val.md'
             - Cuda:
                 - '[empty_cache]清空显存': './pytorch/cuda/[empty_cache]清空显存.md'
                 - '[benchmark]训练加速': './pytorch/cuda/[benchmark]训练加速.md'
