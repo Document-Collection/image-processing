@@ -42,6 +42,7 @@ nav:
             - '[list]排序': './python/[list]排序.md'
             - '[enumerate]遍历': './python/[enumerate]遍历.md'
             - '[itertools][product]嵌套循环': './python/[itertools][product]嵌套循环.md'
+            - '[fire]自动生成命令行界面': './python/[fire]自动生成命令行界面.md'
             - 配置文件读写:
                 - XML:
                     - '[python]读取XML文件': './python/[python]读取XML文件.md'
