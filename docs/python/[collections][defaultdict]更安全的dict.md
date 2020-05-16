@@ -1,5 +1,5 @@
 
-# [collections][defaultdict]替代dict使用
+# [collections][defaultdict]更安全的dict
 
 参考：
 
