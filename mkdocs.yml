@@ -44,6 +44,7 @@ nav:
             - '[itertools][product]嵌套循环': './python/[itertools][product]嵌套循环.md'
             - '[fire]自动生成命令行界面': './python/[fire]自动生成命令行界面.md'
             - '[pprint]更易读的打印': './python/[pprint]更易读的打印.md'
+            - '[easydict]访问属性的方式来访问字典': './python/[easydict]访问属性的方式来访问字典.md'
             - 配置文件读写:
                 - XML:
                     - '[python]读取XML文件': './python/[python]读取XML文件.md'
