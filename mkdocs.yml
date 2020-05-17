@@ -231,6 +231,7 @@ nav:
             - '[transpose][permute]维度转换': './pytorch/[transpose][permute]维度转换.md'
             - '[clamp]限制取值范围': './pytorch/[clamp]限制取值范围.md'
             - '[index_fill]在给定维度填充指定val': './pytorch/[index_fill]在给定维度填充指定val.md'
+            - '[nonzero]非零元素下标': './pytorch/[nonzero]非零元素下标.md'
             - Cuda:
                 - '[empty_cache]清空显存': './pytorch/cuda/[empty_cache]清空显存.md'
                 - '[benchmark]训练加速': './pytorch/cuda/[benchmark]训练加速.md'
