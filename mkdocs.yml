@@ -48,6 +48,7 @@ nav:
             - '[collections][deque]双向队列的使用': './python/[collections][deque]双向队列的使用.md'
             - '[collections][defaultdict]更安全的dict': './python/[collections][defaultdict]更安全的dict.md'
             - '[slice]扩展切片操作': './python/[slice]扩展切片操作.md'
+            - '[tqdm]进度条': './python/[tqdm]进度条.md'
             - 配置文件读写:
                 - XML:
                     - '[python]读取XML文件': './python/[python]读取XML文件.md'
