@@ -236,6 +236,7 @@ nav:
             - '[nonzero]非零元素下标': './pytorch/[nonzero]非零元素下标.md'
             - Cuda:
                 - '安装哪个版本的CUDA': './pytorch/cuda/安装哪个版本的CUDA.md'
+                - '[CUDA_VISIBLE_DEVICES]指定哪张卡运行': './pytorch/cuda/[CUDA_VISIBLE_DEVICES]指定哪张卡运行.md'
                 - '[empty_cache]清空显存': './pytorch/cuda/[empty_cache]清空显存.md'
                 - '[benchmark]训练加速': './pytorch/cuda/[benchmark]训练加速.md'
                 - '监控显存使用': './pytorch/cuda/监控显存使用.md'
