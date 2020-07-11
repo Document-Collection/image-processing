@@ -245,6 +245,7 @@ nav:
                 - '固定部分参数进行训练': './pytorch/model/固定部分参数进行训练.md'
                 - '查询模型参数总数': './pytorch/model/查询模型参数总数.md'    
                 - '[译]保存和加载模型': './pytorch/model/[译]保存和加载模型.md'
+                - 为什么推荐使用static_dict方式保存模型: pytorch/model/为什么推荐使用static_dict方式保存模型.md
                 - '加载部分预训练模型': './pytorch/model/加载部分预训练模型.md'
                 - 'LeNet-5定义': './pytorch/model/LeNet-5定义.md'
                 - 'AlexNet定义': './pytorch/model/AlexNet定义.md'
