@@ -51,6 +51,7 @@ nav:
             - '[tqdm]进度条': './python/[tqdm]进度条.md'
             - '[around]四舍五入': './python/[around]四舍五入.md'
             - '[pip]更新国内镜像源': './python/pip-更新国内镜像源.md'
+            - '[pip]python: bad interpreter': './python/pip-python-bad-interpreter.md'
             - 配置文件读写:
                 - XML:
                     - '[python]读取XML文件': './python/[python]读取XML文件.md'
