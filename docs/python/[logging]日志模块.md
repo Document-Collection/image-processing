@@ -1,5 +1,5 @@
 
-# [logging]日志记录
+# [logging]日志模块
 
 参考：
 
@@ -223,6 +223,62 @@ if __name__ == '__main__':
 02:25:18 2020/01/14 logg.py[line:37] WARNING hello world 3
 02:25:18 2020/01/14 logg.py[line:38] ERROR hello world 4
 02:25:18 2020/01/14 logg.py[line:39] CRITICAL hello world 5
+```
+
+## 封装
+
+仓库[lufficc/SSD](https://github.com/lufficc/SSD)给出了一个`logging`模块的封装，实现控制台窗口和文件的同步写入
+
+```
+import logging
+import os
+import sys
+
+
+def setup_logger(name, save_dir=None):
+    logger = logging.getLogger(name)
+
+    logger.propagate = False
+
+    logger.setLevel(logging.DEBUG)
+    stream_handler = logging.StreamHandler(stream=sys.stdout)
+    formatter = logging.Formatter("%(asctime)s %(name)s %(levelname)s: %(message)s")
+    stream_handler.setLevel(logging.DEBUG)
+    stream_handler.setFormatter(formatter)
+    logger.addHandler(stream_handler)
+
+    if save_dir:
+        fh = logging.FileHandler(os.path.join(save_dir, 'log.txt'), mode='a')
+        fh.setLevel(logging.DEBUG)
+        fh.setFormatter(formatter)
+        logger.addHandler(fh)
+    return logger
+```
+
+## 问题：重复输出日志
+
+使用上述封装后的`logging`函数
+
+```
+from automark.utils.logger import setup_logger
+
+logger = setup_logger(__name__, save_dir=self.dst_dir)
+logger.debug('加载xxx')
+```
+
+打印结果时会出现重复的输出
+
+```
+2020-07-11 10:53:44,198 xxxx DEBUG: 加载模型
+2020-07-11 10:53:44,198-DEBUG: 加载模型
+....
+....
+```
+
+参考[https://stackoverflow.com/questions/19561058/](duplicate-output-in-simple-python-logging-configuration/19561320)后发现是因为子`logger`对象会传播到根`logger`对象，造成重复输出的想象，添加如下设置即可
+
+```
+ logger.propagate = False
 ```
 
 ## 进一步

@@ -38,7 +38,7 @@ nav:
             - '[抽象基类]abc': './python/[抽象基类]abc.md'
             - '模块和包': './python/模块和包.md'
             - 'pytest': './python/pytest.md'
-            - '[logging]日志记录': './python/[logging]日志记录.md'
+            - '[logging]日志模块': './python/[logging]日志模块.md'
             - '[list]排序': './python/[list]排序.md'
             - '[enumerate]遍历': './python/[enumerate]遍历.md'
             - '[itertools][product]嵌套循环': './python/[itertools][product]嵌套循环.md'
