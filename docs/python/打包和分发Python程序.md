@@ -17,6 +17,7 @@
     * 配置版本号
     * 配置依赖库
     * 配置命令行脚本
+    * 创建徽章
 * 最终版本
     * 实现打包、上传和`GIT`标签一条龙服务
 * 问题
@@ -300,6 +301,10 @@ if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
     sys.exit(main())
 ```
+
+### 创建徽章
+
+参考[自定义徽章](https://zj-git-guide.readthedocs.io/zh_CN/latest/readme/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BE%BD%E7%AB%A0/)，为`pypi`项目创建徽章
 
 ## 最终版本
 
