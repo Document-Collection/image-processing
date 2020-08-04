@@ -206,6 +206,7 @@ nav:
                 - '[threshold]基本阈值操作': './opencv/code/[threshold]基本阈值操作.md'
                 - '[旋转][平移][缩放]仿射变换': './opencv/code/[旋转][平移][缩放]仿射变换.md'
                 - '特征/特征检测/特征描述': './opencv/code/Understanding-Features.md'
+                - '[SIFT]特征和描述符计算': './opencv/code/[SIFT]特征和描述符计算.md'
             - 图像绘制:
                 - '[line]绘制线段': './opencv/draw/[line]绘制线段.md'
                 - '[rectangle]绘制边框': './opencv/draw/[rectangle]绘制边框.md'
