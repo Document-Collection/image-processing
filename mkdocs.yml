@@ -207,6 +207,7 @@ nav:
                 - '[旋转][平移][缩放]仿射变换': './opencv/code/[旋转][平移][缩放]仿射变换.md'
                 - '特征/特征检测/特征描述': './opencv/code/Understanding-Features.md'
                 - '[SIFT]特征和描述符计算': './opencv/code/[SIFT]特征和描述符计算.md'
+                - '[Brute-Force][FLANN]特征匹配': './opencv/code/Brute-Force-FLANN-特征匹配.md'
             - 图像绘制:
                 - '[line]绘制线段': './opencv/draw/[line]绘制线段.md'
                 - '[rectangle]绘制边框': './opencv/draw/[rectangle]绘制边框.md'
