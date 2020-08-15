@@ -54,6 +54,7 @@ nav:
             - '[pip]更新国内镜像源': './python/pip-更新国内镜像源.md'
             - '[pip]python: bad interpreter': './python/pip-python-bad-interpreter.md'
             - '[python3.6][f-strings]字符串连接': './python/[python3.6][f-strings]字符串连接.md'
+            - '保存json或者dict数据为voc-xml文件': './python/保存json或者dict数据为voc-xml文件.md'
             - 配置文件读写:
                 - XML:
                     - '[python]读取XML文件': './python/[python]读取XML文件.md'
