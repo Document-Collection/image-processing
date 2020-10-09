@@ -191,6 +191,7 @@ nav:
                     - 'OpenCV-4.2.0配置及测试': './opencv/install-configure/OpenCV-4.2.0配置及测试.md'
                 - '[PyCharm]解码opencv python库': './opencv/install-configure/[PyCharm]解码opencv python库.md'
                 - '[OpenCV]Anaconda配置': './opencv/install-configure/[OpenCV]Anaconda配置.md'
+                - '[SSH][OpenCV]远程图像显示': './opencv/install-configure/SSH-OpenCV-远程图像显示.md'
             - '图像处理及实现':
                 - 'Filter':
                     - '[filter2D]线性滤波器': './opencv/code/[filter2D]线性滤波器.md'
