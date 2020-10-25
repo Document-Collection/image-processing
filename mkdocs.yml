@@ -273,6 +273,7 @@ nav:
                 - 'RuntimeError: CUDA error: initialization error': './pytorch/error/RuntimeError: CUDA error: initialization error.md'
                 - 'RuntimeError: invalid argument 0: Sizes of tensors must match': './pytorch/error/RuntimeError: invalid argument 0: Sizes of tensors must match.md'
                 - 'OSError: [Errno 12] Cannot allocate memory': './pytorch/error/OSError: [Errno 12] Cannot allocate memory.md'
+                - 'Process finished with exit code 137 (interrupted by signal 9: SIGKILL) ': './pytorch/error/Process finished with exit code 137 (interrupted by signal 9: SIGKILL) .md'
         # - 'CNN':
         #     - '引言': './cnn/引言.md'
         #     - '过拟合和欠拟合': './cnn/过拟合和欠拟合.md'
