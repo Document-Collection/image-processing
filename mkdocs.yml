@@ -245,6 +245,7 @@ nav:
             - '[clamp]限制取值范围': './pytorch/[clamp]限制取值范围.md'
             - '[index_fill]在给定维度填充指定val': './pytorch/[index_fill]在给定维度填充指定val.md'
             - '[nonzero]非零元素下标': './pytorch/[nonzero]非零元素下标.md'
+            - '[[DistributedDataParallel]分布式训练]': './pytorch/distributeddataparallel-分布式训练.md'
             - Cuda:
                 - '安装哪个版本的CUDA': './pytorch/cuda/安装哪个版本的CUDA.md'
                 - '[CUDA_VISIBLE_DEVICES]指定哪张卡运行': './pytorch/cuda/[CUDA_VISIBLE_DEVICES]指定哪张卡运行.md'
