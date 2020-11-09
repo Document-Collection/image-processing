@@ -24,7 +24,7 @@ pip install numpy
 [optional] sudo apt-get install libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev
 ```
 
-# 源码
+## 源码
 
 同一路径下下载`OpenCV`以及`OpenCV_Contrib`源码
 
@@ -150,3 +150,11 @@ ImportError: /home/zj/anaconda3/bin/../lib/libpangoft2-1.0.so.0: undefined symbo
 # 解决
 ~/anaconda3/lib$ mv libpangoft2-1.0.so.0 libpangoft2-1.0.so.0_bak
 ```
+
+自编译的`cv2`无法查看函数定义，在`PyCharm`中会出现
+
+```
+Cannot find reference 'imwrite' in '__init__.py' 
+```
+
+所以在实际开发过程中，可以使用[opencv-python](./[opencv-python]编译与安装.md)；在生产环境再使用自编译库

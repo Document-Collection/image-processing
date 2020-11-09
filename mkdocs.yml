@@ -218,6 +218,7 @@ nav:
                 - '[line]绘制线段': './opencv/draw/[line]绘制线段.md'
                 - '[rectangle]绘制边框': './opencv/draw/[rectangle]绘制边框.md'
                 - '[text]绘制文本': './opencv/draw/[text]绘制文本.md'
+                - '[text]绘制中文字符': './opencv/draw/[text]绘制中文字符.md'
         - Matplotlib:
             - '引言': './matplotlib/引言.md'
             - '属性配置': './matplotlib/属性配置.md'
