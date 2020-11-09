@@ -189,6 +189,8 @@ nav:
                     - 'OpenCV-4.1.0配置及测试': './opencv/install-configure/OpenCV-4.1.0配置及测试.md'
                     - 'OpenCV-4.2.0安装': './opencv/install-configure/OpenCV-4.2.0安装.md'
                     - 'OpenCV-4.2.0配置及测试': './opencv/install-configure/OpenCV-4.2.0配置及测试.md'
+                    - 'OpenCV-4.4.0安装': './opencv/install-configure/OpenCV-4.4.0安装.md'
+                - '[opencv-python]编译与安装': './opencv/install-configure/[opencv-python]编译与安装.md'
                 - '[PyCharm]解码opencv python库': './opencv/install-configure/[PyCharm]解码opencv python库.md'
                 - '[OpenCV]Anaconda配置': './opencv/install-configure/[OpenCV]Anaconda配置.md'
                 - '[SSH][OpenCV]远程图像显示': './opencv/install-configure/SSH-OpenCV-远程图像显示.md'
