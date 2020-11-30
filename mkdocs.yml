@@ -214,6 +214,7 @@ nav:
                 - '特征/特征检测/特征描述': './opencv/code/Understanding-Features.md'
                 - '[SIFT]特征和描述符计算': './opencv/code/[SIFT]特征和描述符计算.md'
                 - '[Brute-Force][FLANN]特征匹配': './opencv/code/Brute-Force-FLANN-特征匹配.md'
+                - '[VideoWriter]保存H264/MPEG4格式MP4视频': './opencv/code/VideoWriter-保存h264-mpeg4格式mp4文件.md'
             - 图像绘制:
                 - '[line]绘制线段': './opencv/draw/[line]绘制线段.md'
                 - '[rectangle]绘制边框': './opencv/draw/[rectangle]绘制边框.md'
