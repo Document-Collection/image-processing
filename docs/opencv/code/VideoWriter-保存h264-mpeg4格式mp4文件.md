@@ -68,3 +68,9 @@ if __name__ == '__main__':
 ```
 conda install -c conda-forge openh264
 ```
+
+如果无法安装成功，那么就下载该文件进行手动安装
+
+```
+pip install --use-local openh264-2.1.1-h780b84a_0.tar.bz2
+```
